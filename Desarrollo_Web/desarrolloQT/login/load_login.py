@@ -19,7 +19,8 @@ class Load_login(QDialog):
         self.login = uic.loadUi(ui,self)
         self.login.setFixedSize(self.width(),self.height())
         self.login.lblMensaje.setText("")
-        
+        self.show()
+
 def main():
     app = QApplication(sys.argv)
     dialogo= Load_login()
