@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>green-arrow-png-2.png</file>
+    <file>rosa.png</file>
+    <file>celsius.jpg</file>
+    <file>farenheit.jpg</file>
+  </qresource>
+</RCC>
