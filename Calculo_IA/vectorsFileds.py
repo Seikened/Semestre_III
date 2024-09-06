@@ -26,4 +26,3 @@ V = fy(X,Y) * magnitud
 
 plt.quiver(X, Y, U, V)
 plt.show()
-
