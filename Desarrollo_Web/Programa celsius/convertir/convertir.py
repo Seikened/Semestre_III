@@ -17,12 +17,10 @@ class ConvertirCelsiusFahrenheit(QDialog):
         self.inicializarUI()
 
     def inicializarUI(self):
-        # Cargar la UI
         self.convertirCelsius = uic.loadUi(ui, self)
         self.setFixedSize(self.width(), self.height())
         self.modelo.entrenar()
-
-        # Listener: Cambié el nombre del método a convertir_temperatura
+        print("Modelo entrenado")
         self.convertirCelsius.convertir.clicked.connect(self.convertir_temperatura)
 
         self.show()
@@ -40,7 +38,6 @@ class ConvertirCelsiusFahrenheit(QDialog):
             return False
 
     def convertir_temperatura(self):
-        # Obtener el valor de Celsius y convertir a Fahrenheit
         celsius = self.celsius.text()
         
         if not self.validar(celsius):

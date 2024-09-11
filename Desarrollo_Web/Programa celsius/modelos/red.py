@@ -12,8 +12,9 @@ class ModeloCelsiusFahrenheit:
         )
 
     def entrenar(self, epochs=1000):
-        celsius = np.arange(-100, 101, 1, dtype=float)  # Array de -100 a 100 grados Celsius
-        fahrenheit = (celsius * 9/5) + 32  # Conversión a Fahrenheit
+        celsius = np.arange(-100, 101, 1, dtype=float)  
+        fahrenheit = (celsius * 9/5) + 32  
+        
         self.historial = self.modelo.fit(celsius, fahrenheit, epochs = epochs, verbose = False)
 
     def predecir(self, celsius):
