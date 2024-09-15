@@ -15,13 +15,13 @@ class GradienteSimulacion:
         self.initialize_variables()
         pygame.font.init()
         self.font = pygame.font.SysFont('Arial', 18)
+        self.show_axes = True  # Variable para controlar la visualización de los ejes
         self.main_loop()
 
     def settings(self):
         config = {
             'window_size': (1920, 1080),
             'background_color': (0.0, 0.0, 0.0, 1.0),
-            # Colores en formato RGB
             'surface_color': (232/255, 175/255, 252/255, 0.3),  # Color de la superficie
             'gradient_color': (175/255, 252/255, 251/255),  # Color del gradiente
             'path_color': (1.0, 1.0, 0.0),
@@ -85,16 +85,16 @@ class GradienteSimulacion:
                     self.rotation_y += (mouse_x - self.last_mouse_x) * 0.2
                     self.last_mouse_x, self.last_mouse_y = mouse_x, mouse_y
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_s:
-                    self.simulation_active = True
-                elif event.key == pygame.K_p:
-                    self.simulation_active = False
+                if event.key == pygame.K_SPACE:
+                    self.simulation_active = not self.simulation_active  # Iniciar o detener simulación
                 elif event.key == pygame.K_r:
-                    self.pos = [np.random.uniform(-5, 5), np.random.uniform(-5, 5)]
+                    self.pos = [np.random.uniform(-5, 5), np.random.uniform(-5, 5)]  # Reiniciar posición
                     self.path = [tuple(self.pos)]
                     self.iterations = 0
                     self.simulation_done = False
                     self.simulation_active = False
+                elif event.key == pygame.K_e:
+                    self.show_axes = not self.show_axes  # Ocultar/mostrar ejes
 
     def update_simulation(self):
         if self.simulation_active and not self.simulation_done:
@@ -112,35 +112,37 @@ class GradienteSimulacion:
             self.iterations += 1
 
     def draw_axes(self):
-        glColor3f(*self.config['axes_color'])
-        glBegin(GL_LINES)
-        axis_length = 10
-        # Eje X
-        glVertex3f(-axis_length, 0, 0)
-        glVertex3f(axis_length, 0, 0)
-        # Eje Y
-        glVertex3f(0, -axis_length, 0)
-        glVertex3f(0, axis_length, 0)
-        # Eje Z
-        glVertex3f(0, 0, -axis_length)
-        glVertex3f(0, 0, axis_length)
-        glEnd()
+        if self.show_axes:
+            glColor3f(*self.config['axes_color'])
+            glBegin(GL_LINES)
+            axis_length = 10
+            # Eje X
+            glVertex3f(-axis_length, 0, 0)
+            glVertex3f(axis_length, 0, 0)
+            # Eje Y
+            glVertex3f(0, -axis_length, 0)
+            glVertex3f(0, axis_length, 0)
+            # Eje Z
+            glVertex3f(0, 0, -axis_length)
+            glVertex3f(0, 0, axis_length)
+            glEnd()
 
     def draw_labels(self):
-        glColor3f(1.0, 1.0, 1.0)
-        glRasterPos3f(11, 0, 0)
-        for c in "X":
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
-        glRasterPos3f(0, 11, 0)
-        for c in "Y":
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
-        glRasterPos3f(0, 0, 11)
-        for c in "Z":
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
+        if self.show_axes:
+            glColor3f(1.0, 1.0, 1.0)
+            glRasterPos3f(11, 0, 0)
+            for c in "X":
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
+            glRasterPos3f(0, 11, 0)
+            for c in "Y":
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
+            glRasterPos3f(0, 0, 11)
+            for c in "Z":
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))  # type: ignore
 
     def draw_surface(self):
         glColor4f(*self.config['surface_color'])
-        glEnable(GL_BLEND)  # Asegurarse de que el blending esté habilitado
+        glEnable(GL_BLEND)
         for x in np.arange(-5, 5, 0.5):
             glBegin(GL_LINE_STRIP)
             for y in np.arange(-5, 5, 0.5):
@@ -172,14 +174,7 @@ class GradienteSimulacion:
         glVertex3f(x, y, z)
         glEnd()
 
-    def draw_text(self, text, position, color=(255, 255, 255)):
-        text_surface = self.font.render(text, True, color)
-        text_data = pygame.image.tostring(text_surface, "RGBA", True)
-        glWindowPos2d(position[0], self.config['window_size'][1] - position[1])
-        glDrawPixels(text_surface.get_width(), text_surface.get_height(), GL_RGBA, GL_UNSIGNED_BYTE, text_data)
-
     def render_text(self):
-        # Cambiamos a proyección ortográfica para el texto 2D
         glMatrixMode(GL_PROJECTION)
         glPushMatrix()
         glLoadIdentity()
@@ -201,13 +196,13 @@ class GradienteSimulacion:
         iterations_text = f"Iteraciones: {self.iterations}"
         simulation_status = "En ejecución" if self.simulation_active else "Pausada"
         status_text = f"Estado de la simulación: {simulation_status}"
+        controls = "Controles: Espacio (Iniciar/Detener), E (Mostrar/Ocultar ejes), R (Reiniciar)"
 
         # Posiciones para el texto
-        y_offset = 20  # Posición inicial en y
-        line_spacing = 20  # Espacio entre líneas
-        texts = [func_text, pos_text, func_value_text, grad_text, grad_magnitude_text, iterations_text, status_text]
+        texts = [func_text, pos_text, func_value_text, grad_text, grad_magnitude_text, iterations_text, simulation_status, controls]
+        y_offset = 20
         for i, text in enumerate(texts):
-            self.draw_text(text, (10, y_offset + i * line_spacing))
+            self.draw_text(text, (10, y_offset + i * 20))
 
         glEnable(GL_DEPTH_TEST)
         glMatrixMode(GL_PROJECTION)
@@ -215,10 +210,15 @@ class GradienteSimulacion:
         glMatrixMode(GL_MODELVIEW)
         glPopMatrix()
 
+    def draw_text(self, text, position, color=(255, 255, 255)):
+        text_surface = self.font.render(text, True, color)
+        text_data = pygame.image.tostring(text_surface, "RGBA", True)
+        glWindowPos2d(position[0], self.config['window_size'][1] - position[1])
+        glDrawPixels(text_surface.get_width(), text_surface.get_height(), GL_RGBA, GL_UNSIGNED_BYTE, text_data)
+
     def render(self):
         glClearColor(*self.config['background_color'])
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-        # Configuración de la vista y la proyección
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
         gluPerspective(45, (self.config['window_size'][0] / self.config['window_size'][1]), 0.1, 100.0)
@@ -246,5 +246,5 @@ class GradienteSimulacion:
 
 # Define aquí tu función simbólica
 x, y = sp.symbols('x y')
-func_expr = x**2 + y**2
+func_expr = sp.sin(x) + sp.cos(y)
 simulacion = GradienteSimulacion(func_expr)
