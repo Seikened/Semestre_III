@@ -16,11 +16,13 @@ class GradienteSimulacion:
         pygame.font.init()
         self.font = pygame.font.SysFont('Arial', 18)
         self.show_axes = True  # Variable para controlar la visualización de los ejes
+        self.show_contours = False  # Para mostrar/ocultar curvas de nivel
+        self.show_vector_field = False  # Para mostrar/ocultar campo vectorial
         self.main_loop()
 
     def settings(self):
         config = {
-            'window_size': (1920, 1080),
+            'window_size': (1280, 720),
             'background_color': (0.0, 0.0, 0.0, 1.0),
             'surface_color': (232/255, 175/255, 252/255, 0.3),  # Color de la superficie
             'gradient_color': (175/255, 252/255, 251/255),  # Color del gradiente
@@ -35,6 +37,7 @@ class GradienteSimulacion:
     def init_pygame_opengl(self):
         pygame.init()
         pygame.display.set_mode(self.config['window_size'], DOUBLEBUF | OPENGL)
+        pygame.display.set_caption("Simulación de Gradiente")
         glutInit()
         glEnable(GL_BLEND)
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
@@ -95,6 +98,10 @@ class GradienteSimulacion:
                     self.simulation_active = False
                 elif event.key == pygame.K_e:
                     self.show_axes = not self.show_axes  # Ocultar/mostrar ejes
+                elif event.key == pygame.K_c:
+                    self.show_contours = not self.show_contours  # Activa/desactiva curvas de nivel
+                elif event.key == pygame.K_v:
+                    self.show_vector_field = not self.show_vector_field  # Activa/desactiva campo vectorial
 
     def update_simulation(self):
         if self.simulation_active and not self.simulation_done:
@@ -156,6 +163,25 @@ class GradienteSimulacion:
                 glVertex3f(x, y, z)
             glEnd()
 
+
+
+    def draw_contours(self):
+        pass
+
+
+
+    def draw_vector_field(self):
+        """ Dibujar campo vectorial """
+        if self.show_vector_field:
+            glColor3f(1.0, 0.0, 0.0)  # Rojo para los vectores del campo
+            for x in np.arange(-5, 5, 0.5):
+                for y in np.arange(-5, 5, 0.5):
+                    grad_x, grad_y = self.grad(x, y)
+                    glBegin(GL_LINES)
+                    glVertex3f(x, y, self.func(x, y))
+                    glVertex3f(x + grad_x * 0.1, y + grad_y * 0.1, self.func(x, y))
+                    glEnd()
+
     def draw_path(self):
         glColor3f(*self.config['path_color'])
         glBegin(GL_LINE_STRIP)
@@ -196,10 +222,14 @@ class GradienteSimulacion:
         iterations_text = f"Iteraciones: {self.iterations}"
         simulation_status = "En ejecución" if self.simulation_active else "Pausada"
         status_text = f"Estado de la simulación: {simulation_status}"
-        controls = "Controles: Espacio (Iniciar/Detener), E (Mostrar/Ocultar ejes), R (Reiniciar)"
+        controls1 = "Controles: Espacio (Iniciar/Detener)"
+        controls2 = "R (Reiniciar)"
+        controls3 = "E (Ocultar/Mostrar ejes)"
+        controls4 = "V (Ocultar/Mostrar campo vectorial)"
+        
 
         # Posiciones para el texto
-        texts = [func_text, pos_text, func_value_text, grad_text, grad_magnitude_text, iterations_text, simulation_status, controls]
+        texts = [func_text, pos_text, func_value_text, grad_text, grad_magnitude_text, iterations_text, simulation_status, controls1, controls2, controls3, controls4]
         y_offset = 20
         for i, text in enumerate(texts):
             self.draw_text(text, (10, y_offset + i * 20))
@@ -230,6 +260,8 @@ class GradienteSimulacion:
         self.draw_axes()
         self.draw_labels()
         self.draw_surface()
+        self.draw_contours()  # Dibujar curvas de nivel si están activadas
+        self.draw_vector_field()  # Dibujar campo vectorial si está activado
         self.draw_path()
         self.draw_current_point()
         self.render_text()
