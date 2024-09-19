@@ -226,7 +226,6 @@ class GradienteSimulacion:
         controls2 = "R (Reiniciar)"
         controls3 = "E (Ocultar/Mostrar ejes)"
         controls4 = "V (Ocultar/Mostrar campo vectorial)"
-        
 
         # Posiciones para el texto
         texts = [func_text, pos_text, func_value_text, grad_text, grad_magnitude_text, iterations_text, simulation_status, controls1, controls2, controls3, controls4]
@@ -278,5 +277,5 @@ class GradienteSimulacion:
 
 # Define aquí tu función simbólica
 x, y = sp.symbols('x y')
-func_expr = sp.sin(x) + sp.cos(y)
+func_expr = x**2 - y**2
 simulacion = GradienteSimulacion(func_expr)

@@ -67,15 +67,15 @@ def draw_labels():
     # Eje X
     glRasterPos3f(11, 0, 0)
     for c in "X":
-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c)) # type: ignore
     # Eje Y
     glRasterPos3f(0, 11, 0)
     for c in "Y":
-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c)) # type: ignore
     # Eje Z
     glRasterPos3f(0, 0, 11)
     for c in "Z":
-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c)) # type: ignore
     glDisable(GL_TEXTURE_2D)
 
 def draw_surface(func, config):
