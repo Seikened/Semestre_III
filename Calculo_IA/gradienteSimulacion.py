@@ -277,5 +277,5 @@ class GradienteSimulacion:
 
 # Define aquí tu función simbólica
 x, y = sp.symbols('x y')
-func_expr = x**2 - y**2
+func_expr = sp.cos(x) + sp.sin(y)
 simulacion = GradienteSimulacion(func_expr)
