@@ -5,11 +5,16 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 import numpy as np
 import sympy as sp
+import json
+import os
+import re
+
+
 
 class GradienteSimulacion:
-    def __init__(self, func_expr):
-        self.func_expr = func_expr
+    def __init__(self, func_expr="cos(x) * (2*sen(y))"):
         self.config = self.settings()
+        self.func_expr = self.normalize(func_expr)
         self.init_pygame_opengl()
         self.define_function()
         self.initialize_variables()
@@ -19,10 +24,19 @@ class GradienteSimulacion:
         self.show_contours = False  # Para mostrar/ocultar curvas de nivel
         self.show_vector_field = False  # Para mostrar/ocultar campo vectorial
         self.main_loop()
+    
 
     def settings(self):
+        dir = os.path.abspath(__file__)
+        dir = os.path.dirname(dir)
+        dir = os.path.dirname(dir)
+        print(dir)
+        dic = os.path.join(dir, "dictionary/dic.json")
+        with open(dic, "r") as file:
+            self.dic = json.load(file)
+
         config = {
-            'window_size': (1280, 720),
+            'window_size': (1400, 800),
             'background_color': (0.0, 0.0, 0.0, 1.0),
             'surface_color': (232/255, 175/255, 252/255, 0.3),  # Color de la superficie
             'gradient_color': (175/255, 252/255, 251/255),  # Color del gradiente
@@ -32,8 +46,30 @@ class GradienteSimulacion:
             'max_iterations': 1000,  # Número máximo de iteraciones
             'zoom_speed': 1.0,  # Velocidad de zoom
         }
+        
         return config
 
+
+
+    def normalize(self, expr):
+        dictionary = self.dic
+        for keyMath, replacement in dictionary.items():
+            if not keyMath:
+                print(f"Saltando clave vacía con reemplazo '{replacement}'")
+                continue  # Omitir claves vacías
+            # Verificar si keyMath es alfanumérico o '_'
+            if keyMath.isalnum() or keyMath == '_':
+                # Usar límites de palabra
+                expr = re.sub(rf'\b{re.escape(keyMath)}\b', replacement, expr)
+            else:
+                # Reemplazar todas las ocurrencias sin límites de palabra
+                expr = expr.replace(keyMath, replacement)
+        print(f"Expresión después de la normalización: {expr}")
+        sympy_expr = sp.sympify(expr)
+        self.symbols = sorted(sympy_expr.free_symbols, key=lambda s: s.name)
+        print(f"Símbolos utilizados en la expresión: {self.symbols}")
+        return sympy_expr
+    
     def init_pygame_opengl(self):
         pygame.init()
         pygame.display.set_mode(self.config['window_size'], DOUBLEBUF | OPENGL)
@@ -47,11 +83,16 @@ class GradienteSimulacion:
         glDisable(GL_LIGHTING)  # Deshabilitar iluminación
 
     def define_function(self):
-        x_sym, y_sym = sp.symbols('x y')
+        symbols = self.symbols
         func_expr = self.func_expr
-        grad_expr = [sp.diff(func_expr, var) for var in (x_sym, y_sym)]
-        self.func = sp.lambdify((x_sym, y_sym), func_expr, 'numpy')
-        self.grad = sp.lambdify((x_sym, y_sym), grad_expr, 'numpy')
+
+        # Usa NumPy para la función numérica
+        self.func = sp.lambdify(symbols, func_expr, 'numpy')
+
+        # Evaluar completamente las derivadas
+        grad_expr = [sp.diff(func_expr, var).doit() for var in symbols]
+        print(f"Expresiones de gradiente: {grad_expr}")
+        self.grad = sp.lambdify(symbols, grad_expr, 'numpy')
 
     def initialize_variables(self):
         self.rotation_x = self.rotation_y = 0
@@ -67,28 +108,43 @@ class GradienteSimulacion:
 
     def handle_events(self):
         for event in pygame.event.get():
+            # Evento de salir o ESC
             if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
                 pygame.quit()
                 quit()
+            
+            # Eventos de ratón
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     self.mouse_down = True
                     self.last_mouse_x, self.last_mouse_y = event.pos
-                elif event.button == 4:  # Rueda hacia arriba
+                # Zoom con rueda del ratón
+                elif event.button == 4:  # Scroll hacia arriba
                     self.zoom_level += self.config['zoom_speed']
-                elif event.button == 5:  # Rueda hacia abajo
+                elif event.button == 5:  # Scroll hacia abajo
                     self.zoom_level -= self.config['zoom_speed']
+
             elif event.type == pygame.MOUSEBUTTONUP:
                 if event.button == 1:
                     self.mouse_down = False
+
             elif event.type == pygame.MOUSEMOTION:
                 if self.mouse_down:
                     mouse_x, mouse_y = event.pos
                     self.rotation_x += (mouse_y - self.last_mouse_y) * 0.2
                     self.rotation_y += (mouse_x - self.last_mouse_x) * 0.2
                     self.last_mouse_x, self.last_mouse_y = mouse_x, mouse_y
+
+            # Eventos de teclado
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
+                # Zoom con flechas del teclado
+                if event.key == pygame.K_UP:
+                    self.zoom_level += self.config['zoom_speed']
+                elif event.key == pygame.K_DOWN:
+                    self.zoom_level -= self.config['zoom_speed']
+
+                # Control de simulación
+                elif event.key == pygame.K_SPACE:
                     self.simulation_active = not self.simulation_active  # Iniciar o detener simulación
                 elif event.key == pygame.K_r:
                     self.pos = [np.random.uniform(-5, 5), np.random.uniform(-5, 5)]  # Reiniciar posición
@@ -275,7 +331,8 @@ class GradienteSimulacion:
 
 # -------------------------------------------------------------
 
-# Define aquí tu función simbólica
-x, y = sp.symbols('x y')
-func_expr = sp.cos(x) + sp.sin(y)
-simulacion = GradienteSimulacion(func_expr)
+
+
+if __name__ == "__main__":
+    function = "cos(x) * (2*sen(y))"
+    simulacion = GradienteSimulacion(function)
