@@ -28,3 +28,4 @@ class MenuClass(QMainWindow):
     def simulation(self):
         ecuation = self.menu.ecuation.text()
         GradienteSimulacion(ecuation)
+        

@@ -219,13 +219,6 @@ class GradienteSimulacion:
                 glVertex3f(x, y, z)
             glEnd()
 
-
-
-    def draw_contours(self):
-        pass
-
-
-
     def draw_vector_field(self):
         """ Dibujar campo vectorial """
         if self.show_vector_field:
@@ -315,7 +308,6 @@ class GradienteSimulacion:
         self.draw_axes()
         self.draw_labels()
         self.draw_surface()
-        self.draw_contours()  # Dibujar curvas de nivel si están activadas
         self.draw_vector_field()  # Dibujar campo vectorial si está activado
         self.draw_path()
         self.draw_current_point()
@@ -334,5 +326,5 @@ class GradienteSimulacion:
 
 
 if __name__ == "__main__":
-    function = "cos(x) * (2*sen(y))"
+    function = "sin(x)^2 * (2*cos(y))"
     simulacion = GradienteSimulacion(function)
