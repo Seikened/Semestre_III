@@ -1,5 +1,5 @@
-from PyQt6.QtGui import QStandardItemModel, QStandardItem, QColor
-from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QHeaderView
+from PyQt6.QtGui import QStandardItemModel, QStandardItem, QColor, QKeySequence, QGuiApplication, QShortcut
+from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QHeaderView, QMenu
 from PyQt6.QtCore import QTimer, Qt
 from modelo.base.productoBase import ProductoBase
 from modelo.base.product import Producto
@@ -16,7 +16,9 @@ class ProductoApp(QMainWindow):
         # Inicializar el índice de la última fila modificada
         self.ultima_fila_modificada = None
         self.listar_productos()
-        QTimer.singleShot(1000, self.limpiar_campos)
+        # Crear un atajo de teclado para copiar la selección
+        self.copy_shortcut = QShortcut(QKeySequence('Ctrl+C'), self)
+        self.copy_shortcut.activated.connect(self.copiar_seleccion)
 
     def loadUI(self):
         self.crudApp = uic.loadUi(ui, self)
@@ -25,7 +27,6 @@ class ProductoApp(QMainWindow):
         # Conectar botones a funciones
         self.crudApp.readBtn.clicked.connect(self.listar_productos)
         self.crudApp.createBtn.clicked.connect(self.guardar_producto)
-        #self.crudApp.updateBtn.clicked.connect(self.actualizar_producto)
         self.crudApp.deleteBtn.clicked.connect(self.eliminar_producto)
         self.crudApp.searchBtn.clicked.connect(self.buscar_producto)
         self.crudApp.countBtn.clicked.connect(self.contar_productos)
@@ -64,7 +65,35 @@ class ProductoApp(QMainWindow):
                 elif descripcion:
                     return True, descripcion
             return False, None
+    
+    def copiar_seleccion(self):
+        # Obtener el índice seleccionado de la tabla
+        seleccion = self.crudApp.table.selectionModel().selectedIndexes()
 
+        if seleccion:
+            # Crear un diccionario para almacenar filas y columnas
+            rows = {}
+            for index in seleccion:
+                fila = index.row()
+                columna = index.column()
+                # Añadir la celda al diccionario en la fila correspondiente
+                if fila not in rows:
+                    rows[fila] = {}
+                rows[fila][columna] = self.modelo.item(index.row(), index.column()).text()
+            
+            # Construir el texto a copiar como filas separadas por tabulaciones y saltos de línea
+            texto_a_copiar = "\n".join(
+                "\t".join(rows[fila][col] for col in sorted(rows[fila].keys()))
+                for fila in sorted(rows.keys())
+            )
+            
+            # Copiar el texto al portapapeles
+            QGuiApplication.clipboard().setText(texto_a_copiar)
+
+        else:
+            self.mostrar_mensaje("Información", "No hay celdas seleccionadas para copiar.")
+
+    
     def limpiar_campos(self):
         self.crudApp.claveLabel.setText('')
         self.crudApp.descripcionLabel.setText('')
@@ -93,7 +122,19 @@ class ProductoApp(QMainWindow):
 
         # Conectar señal para edición de celdas
         self.modelo.itemChanged.connect(self.actualizar_producto)
-
+        # Permitir menú contextual
+        self.crudApp.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        self.crudApp.table.customContextMenuRequested.connect(self.mostrar_menu_contextual)
+    
+    def mostrar_menu_contextual(self, position):
+        # Crear el menú contextual
+        menu = QMenu()
+        copiar_accion = menu.addAction("Copiar")
+        copiar_accion.triggered.connect(self.copiar_seleccion)
+        
+        # Mostrar el menú contextual en la posición del cursor
+        menu.exec(self.crudApp.table.viewport().mapToGlobal(position))
+    
     def columnas(self):
         clave = self.crudApp.claveLabel.text()
         descripcion = self.crudApp.descripcionLabel.text()
