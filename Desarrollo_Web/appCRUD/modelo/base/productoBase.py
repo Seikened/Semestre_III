@@ -71,21 +71,28 @@ class ProductoBase:
         query = "SELECT * FROM fn_buscar_producto(%s);"
         cursor.execute(query, (producto_buscar,))
         
+
         productos = cursor.fetchall()
-        print(f"Buscando {producto_buscar}: {productos}")
         
         if productos:
-            for producto in productos:
-                print(f"Clave: {producto[0]} | Descripción: {producto[1]} | Existencia: {producto[2]} | Precio: {producto[3]}")
-                self.producto.clave = producto[0]
-                self.producto.descripcion = producto[1]
-                self.producto.existencia = producto[2]
-                self.producto.precio = producto[3]
+            self.status = f"Búsqueda de {producto_buscar} completada"
+            base_datos.cerrar_conexion()
+            return productos
         else:
             self.status = f"Producto {producto_buscar} no encontrado"
-        
-        self.status = f"Búsqueda de {producto_buscar} completada"
+            base_datos.cerrar_conexion()
+            return False
+    
+    def contar_productos_totaales(self):
+        """Cuenta la cantidad de productos en la base de datos."""
+        base_datos = Conexion()
+        base_datos.conexion()
+        cursor = base_datos.conexion.cursor()
+        query = 'SELECT fn_contar_productos();'
+        cursor.execute(query)
+        cantidad = cursor.fetchone()[0]
         base_datos.cerrar_conexion()
+        return cantidad
 
     def listar_productos(self):
         """Lista todos los productos de la base de datos."""
@@ -94,6 +101,6 @@ class ProductoBase:
         cursor = base_datos.conexion.cursor()
         query = 'SELECT * FROM fn_listar_productos();'
         cursor.execute(query)
-        filas = cursor.fetchall()
+        productos = cursor.fetchall()
         base_datos.cerrar_conexion()
-        return filas
+        return productos

@@ -8,6 +8,8 @@ from load.interfaz import ProductoApp
 
 def test():
     producto_base = ProductoBase()
+    for i in range(100):
+        producto_base.eliminar_producto(f'FX-Tt{i}')
     
     # Listar todos los productos
     print("Listando todos los productos:")

@@ -55,7 +55,7 @@
      <string>Query SQL</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -117,34 +117,66 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>97</y>
       <width>162</width>
-      <height>100</height>
+      <height>71</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="readBtn">
-       <property name="text">
-        <string>Ver productos</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="updateBtn">
-       <property name="text">
-        <string>Actualizar producto</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="deleteBtn">
        <property name="text">
         <string>Borrar producto</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="searchBtn">
+       <property name="text">
+        <string>Buscar productos</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>150</y>
+      <width>641</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Inserte todos los campos para agregar y/o eliminar| También busque por: {clave o nombre} </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>161</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="countBtn">
+       <property name="text">
+        <string>Contar productos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="readBtn">
+       <property name="text">
+        <string>Ver productos</string>
        </property>
       </widget>
      </item>
@@ -157,7 +189,7 @@
      <x>0</x>
      <y>0</y>
      <width>932</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="font">
