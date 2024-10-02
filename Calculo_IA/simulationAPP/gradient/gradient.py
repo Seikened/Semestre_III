@@ -326,5 +326,5 @@ class GradienteSimulacion:
 
 
 if __name__ == "__main__":
-    function = "sin(x)^2 * (2*cos(y))"
+    function = "sin(x)**2 * (2*cos(y))"
     simulacion = GradienteSimulacion(function)
