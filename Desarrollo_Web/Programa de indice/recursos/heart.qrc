@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="newPrefix"/>
+  <qresource prefix="imc">
+    <file>heart.png</file>
+  </qresource>
+</RCC>
