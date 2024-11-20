@@ -1,0 +1,362 @@
+[
+    {
+        "id": "servicio1",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.77,
+        "ubicacion": [
+            21.157302,
+            -101.704101
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio2",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.49,
+        "ubicacion": [
+            21.025809,
+            -101.255362
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio3",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.34,
+        "ubicacion": [
+            21.106777,
+            -101.625431
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio4",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.62,
+        "ubicacion": [
+            21.144437,
+            -101.63391
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio5",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.51,
+        "ubicacion": [
+            21.172524,
+            -101.717713
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio6",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.78,
+        "ubicacion": [
+            21.018753,
+            -101.293571
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio7",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.8,
+        "ubicacion": [
+            21.027219,
+            -101.276721
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio8",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.95,
+        "ubicacion": [
+            21.039806,
+            -101.216166
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio9",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.25,
+        "ubicacion": [
+            21.134481,
+            -101.718252
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio10",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.9,
+        "ubicacion": [
+            21.01323,
+            -101.203496
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio11",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.84,
+        "ubicacion": [
+            21.04548,
+            -101.251088
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio12",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.42,
+        "ubicacion": [
+            21.042867,
+            -101.292832
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio13",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.6,
+        "ubicacion": [
+            21.176374,
+            -101.726799
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio14",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.94,
+        "ubicacion": [
+            21.008319,
+            -101.224173
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio15",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.68,
+        "ubicacion": [
+            21.161124,
+            -101.693783
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio16",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.68,
+        "ubicacion": [
+            21.009516,
+            -101.270958
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio17",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.74,
+        "ubicacion": [
+            21.025892,
+            -101.218609
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio18",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.74,
+        "ubicacion": [
+            21.039795,
+            -101.256848
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio19",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.06,
+        "ubicacion": [
+            21.030193,
+            -101.2385
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio20",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.74,
+        "ubicacion": [
+            21.142566,
+            -101.656437
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio21",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.11,
+        "ubicacion": [
+            21.032137,
+            -101.24246
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio22",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.57,
+        "ubicacion": [
+            21.049378,
+            -101.26462
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio23",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.88,
+        "ubicacion": [
+            21.129722,
+            -101.666772
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio24",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.52,
+        "ubicacion": [
+            21.033188,
+            -101.276117
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio25",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.06,
+        "ubicacion": [
+            21.04096,
+            -101.241439
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio26",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.62,
+        "ubicacion": [
+            21.105812,
+            -101.696684
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio27",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.75,
+        "ubicacion": [
+            21.194754,
+            -101.723395
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio28",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.84,
+        "ubicacion": [
+            21.039347,
+            -101.293095
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio29",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 0.64,
+        "ubicacion": [
+            21.032719,
+            -101.206917
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": "servicio30",
+        "tipo": "instalaci\u00f3n",
+        "tiempo": 1.43,
+        "ubicacion": [
+            21.170478,
+            -101.708483
+        ],
+        "color": "rojo",
+        "bloqueado": false,
+        "flotilla": null
+    }
+]
