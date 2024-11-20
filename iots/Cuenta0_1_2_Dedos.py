@@ -3,6 +3,7 @@ import mediapipe as mp
 import paho.mqtt.client as mqtt  # Instalar biblioteca para poder comunicar con el broker MQTT
 import urllib.request  # Para poder leer la imagen desde un link url
 import numpy as np
+import time
 
 ruta_certificado = (
     "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/root_ca.pem"
@@ -17,9 +18,13 @@ print("Contenido del certificado (parcial):")
 print(contenido_certificado[:100] + "\n...\n" + contenido_certificado[-100:])
 
 # Configurar MQTT
-mqtt_broker = "a93ced358b004f36b2d791f6c69aba07"
+mqtt_broker = "a93ced358b004f36b2d791f6c69aba07.s1.eu.hivemq.cloud"
 mqtt_port = 8883
-mqtt_topic = "topic_contador_dedos"
+mqtt_topic = "indice"
+mqtt_topic = "medio"
+mqtt_topic = "anular"
+mqtt_topic = "menique"
+
 mqtt_username = "SantRR2"
 mqtt_password = "Arbolito123"
 
@@ -97,16 +102,15 @@ while True:
     print(dedoArriba)
 
     dedos_nombres = ["indice", "medio", "anular", "menique"]
-    dedos_topicos = ["topico_indice", "topico_medio", "topico_anular", "topico_menique"]
+    dedos_topicos = ["indice", "medio", "anular", "menique"]
 
     for i, estado in enumerate(dedoArriba):
-
         client.publish(dedos_topicos[i], f"{estado}")
         print(f"Publicando en {dedos_topicos[i]}: {estado}")
-
-    # Si no hay ningún dedo levantado
-
-    # Mostrar la imagen con las manos detectadas
+    
+    time.sleep(1)
+    
+    #Mostrar la imagen con las manos detectadas
     cv2.imshow("Cuenta dedos ESP32cam", image)
     if cv2.waitKey(15) & 0xFF == 27:  # Presiona 'ESC' para salir
         break

@@ -109,7 +109,9 @@ ARBOL = {
     "d": [None, None],
     "e": [None, None],
     "c": [None, "f"],
-    "f": [None, None],
+    "f": ["h", "g"],
+    "g": [None, None],
+    "h": [None, None],
 }
 
 # Uso de la clase Arbol
