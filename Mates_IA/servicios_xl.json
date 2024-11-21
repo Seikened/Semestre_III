@@ -1,0 +1,5762 @@
+[
+    {
+        "id": 1,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.18420132282321,
+            -101.63394121433772
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 2,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.10849983704086,
+            -101.67616158005451
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 3,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.126874922989874,
+            -101.5862691883731
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 4,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.09137286242708,
+            -101.74168350995943
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 5,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.103012091278117,
+            -101.68857425420272
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 6,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.118868807582132,
+            -101.68218841099677
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 7,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.21740387383875,
+            -101.67525568654237
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 8,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.15079926732907,
+            -101.64206601087648
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 9,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.171404752002225,
+            -101.63763278882917
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 10,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.14384220895326,
+            -101.59923813490754
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 11,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16278749421088,
+            -101.58753678094885
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 12,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.213383670467685,
+            -101.66203929941689
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 13,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.127992129232048,
+            -101.76472985302584
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 14,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.149546933989804,
+            -101.7004161043371
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 15,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.05124457354617,
+            -101.67538945588596
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 16,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12390529080944,
+            -101.66408798244487
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 17,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.15430101402489,
+            -101.7471450284676
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 18,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.072242220461877,
+            -101.63167235198286
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 19,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.170631415307437,
+            -101.68837497302067
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 20,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.103061531568127,
+            -101.6090372824094
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 21,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.086612935185105,
+            -101.65259986924131
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 22,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.157148923136536,
+            -101.6455273148988
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 23,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.082768072711556,
+            -101.68078514001105
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 24,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.18561115596774,
+            -101.7323787935509
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 25,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.077158234601335,
+            -101.673669564516
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 26,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.092424850826585,
+            -101.73985083908369
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 27,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.154167163310944,
+            -101.62603284933188
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 28,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.099037611372804,
+            -101.60378062223363
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 29,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.186805973351763,
+            -101.69283444664461
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 30,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.127890680855327,
+            -101.58925837631952
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 31,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.045942294136374,
+            -101.64939531293732
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 32,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.066430908931967,
+            -101.7088548213647
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 33,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.115078150768422,
+            -101.76052218265689
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 34,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.182451922761224,
+            -101.64476540375007
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 35,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.133550959415064,
+            -101.68381816819873
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 36,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.13131475830247,
+            -101.61918265913991
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 37,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.122064408074817,
+            -101.60807087796816
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 38,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.155008935653033,
+            -101.71094837038473
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 39,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.086661431595864,
+            -101.62213550315617
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 40,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.186914294520395,
+            -101.71813770571744
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 41,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.082267212325803,
+            -101.71819170751918
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 42,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.19998552873296,
+            -101.73329888581442
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 43,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.2135243412749,
+            -101.67984987410382
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 44,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.099402180654547,
+            -101.71569238673548
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 45,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.18138342647824,
+            -101.70562390964304
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 46,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.103955518921424,
+            -101.64053113542639
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 47,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.0643426448039,
+            -101.72683408124377
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 48,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.171126214649465,
+            -101.70212197136307
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 49,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.103696653053532,
+            -101.72296081196525
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 50,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.102849949656097,
+            -101.64277923879968
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 51,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.16150955970386,
+            -101.71760552233079
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 52,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.06803316182939,
+            -101.60762564211004
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 53,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.192491196001555,
+            -101.68227066513103
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 54,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.190259643550558,
+            -101.68458739797045
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 55,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.147329985966486,
+            -101.68774777147907
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 56,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.104099236766693,
+            -101.70688532052516
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 57,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.053899007908168,
+            -101.69527005226468
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 58,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.081894621674348,
+            -101.75424660953689
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 59,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.208548284637427,
+            -101.69668325490841
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 60,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.128258045264815,
+            -101.61983696077553
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 61,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12985435056299,
+            -101.76782417300502
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 62,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.097293952001262,
+            -101.61346516142233
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 63,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.107364982168694,
+            -101.68424505922603
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 64,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.154816548595285,
+            -101.6653847057714
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 65,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.172557581830617,
+            -101.63897786970232
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 66,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16711516493668,
+            -101.7483690648709
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 67,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.138835085644356,
+            -101.59750710735634
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 68,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.153459740339006,
+            -101.72401808644531
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 69,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.138691580674006,
+            -101.68031540703124
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 70,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.14581249246272,
+            -101.66442672194206
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 71,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.191800434299306,
+            -101.73579881508682
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 72,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.184298714864777,
+            -101.61586966715493
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 73,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.121755280784402,
+            -101.60360769733235
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 74,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.04110933290646,
+            -101.66333162128595
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 75,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12029319790147,
+            -101.58585632405803
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 76,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.139116036409856,
+            -101.64317499624369
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 77,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.051023819240044,
+            -101.63340311787044
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 78,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.094593841586057,
+            -101.71647486026903
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 79,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.07561146607929,
+            -101.60852361791086
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 80,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.137949302334377,
+            -101.70651337374494
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 81,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.15489259616008,
+            -101.5902273803421
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 82,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.062293006303587,
+            -101.72616587373304
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 83,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.16563811361763,
+            -101.59645127708569
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 84,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.14796993498106,
+            -101.6900403289441
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 85,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.132756393332954,
+            -101.58688030772915
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 86,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.128084909676314,
+            -101.6615538307952
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 87,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.195970778525485,
+            -101.65479586563995
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 88,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.20909692352712,
+            -101.71380363107961
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 89,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.15820472635574,
+            -101.5829811351557
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 90,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.151029917921278,
+            -101.58971568646277
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 91,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.102324786961976,
+            -101.72257490644907
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 92,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.148776183688465,
+            -101.73197227602206
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 93,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16359990949351,
+            -101.69808320458611
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 94,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.184654272898253,
+            -101.71777455456727
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 95,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.15367752481187,
+            -101.68194152889747
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 96,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.168368203250186,
+            -101.64882548678426
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 97,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.196678480352954,
+            -101.62866390253016
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 98,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.20415423110485,
+            -101.71880630794276
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 99,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.06181725838114,
+            -101.68253851545948
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 100,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.21391442170576,
+            -101.66390197853173
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 101,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.189280917180966,
+            -101.62806198748876
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 102,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.07887786207857,
+            -101.71432840384286
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 103,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.130285742154946,
+            -101.66972689148807
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 104,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.20023656431167,
+            -101.62583301170925
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 105,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.207241903047986,
+            -101.62625254471925
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 106,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.04417823021449,
+            -101.6716759973033
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 107,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.121613368823017,
+            -101.67825089842431
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 108,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.08188353845106,
+            -101.59489812264717
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 109,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.19769306584499,
+            -101.7212948705795
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 110,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.159347188220007,
+            -101.64025464900882
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 111,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.058683786463913,
+            -101.72812062700137
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 112,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.100355739005202,
+            -101.63106024384139
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 113,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.084677211615556,
+            -101.74016641325026
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 114,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.154951782693633,
+            -101.70612762481682
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 115,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.118345019966714,
+            -101.70557325903887
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 116,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.10998294619474,
+            -101.66702920609553
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 117,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.042217359928323,
+            -101.66631004468326
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 118,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.074165521313713,
+            -101.71895259035821
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 119,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.089395982605527,
+            -101.65390035272611
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 120,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.09818192834046,
+            -101.73079369830138
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 121,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.130267188884044,
+            -101.60068049294797
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 122,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.199372266965067,
+            -101.66962225153587
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 123,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.131197957876246,
+            -101.58062894551898
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 124,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.062888170306735,
+            -101.60899553516307
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 125,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12949325099587,
+            -101.6991559819004
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 126,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.08790559706441,
+            -101.71333702147638
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 127,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.125547630406928,
+            -101.64141123215302
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 128,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.180918445493763,
+            -101.70677034237158
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 129,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.15668561813366,
+            -101.62243050939168
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 130,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.207429306991287,
+            -101.70718301933738
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 131,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.08644909481598,
+            -101.6043676819578
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 132,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.08473110359809,
+            -101.66128306335172
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 133,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.11665856563183,
+            -101.65402687072338
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 134,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.138024838173546,
+            -101.74034368725297
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 135,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.048792034386423,
+            -101.67423601243881
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 136,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.042726527646906,
+            -101.65789921767626
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 137,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.11723370528557,
+            -101.60104232242006
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 138,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.144669807275644,
+            -101.70690318340786
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 139,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.131594142341044,
+            -101.73152937774144
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 140,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.125254138429717,
+            -101.76751455251258
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 141,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.169585264373172,
+            -101.71593788447849
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 142,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.085239431680737,
+            -101.66917407242016
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 143,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.11004012614765,
+            -101.64563415019053
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 144,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.109227510942738,
+            -101.58169233545951
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 145,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.117897345070524,
+            -101.62189942858961
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 146,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.163970193999308,
+            -101.62770072941342
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 147,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.076376840008862,
+            -101.715561730382
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 148,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.097274617376073,
+            -101.59798482747718
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 149,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.091291589881607,
+            -101.66320366656473
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 150,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.069974121553564,
+            -101.70774013236769
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 151,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.190595451211617,
+            -101.60755427967631
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 152,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.15683298505063,
+            -101.72239243005079
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 153,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.06597150516784,
+            -101.67020881515042
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 154,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.08124685659436,
+            -101.73590065364081
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 155,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.087927026319836,
+            -101.69962196076642
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 156,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.112396896839527,
+            -101.7322712877785
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 157,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.078577209578803,
+            -101.62763791819481
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 158,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.115743984676133,
+            -101.71978864267331
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 159,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.17614063099745,
+            -101.75453009730124
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 160,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.172278758433144,
+            -101.65573726798245
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 161,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.08813353798346,
+            -101.68821514490064
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 162,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.096198892260595,
+            -101.62632190490552
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 163,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.11560334744813,
+            -101.71655310038895
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 164,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.114618546997903,
+            -101.75874517717554
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 165,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.15321097695519,
+            -101.60967417171645
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 166,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.134351130172778,
+            -101.65829068340148
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 167,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.164426714241962,
+            -101.60096550747119
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 168,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.128916488881544,
+            -101.64846962683511
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 169,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.15789979548675,
+            -101.65850998213811
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 170,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.090930132389826,
+            -101.66347066331062
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 171,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.119713490454355,
+            -101.72111480722543
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 172,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.17833658267826,
+            -101.69332674908783
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 173,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.119345100136282,
+            -101.73925999286803
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 174,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.122613077926058,
+            -101.71577264732102
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 175,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.057019943487017,
+            -101.71251334410482
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 176,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.093114040720867,
+            -101.71199080085408
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 177,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.056877774216854,
+            -101.71781925018986
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 178,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.080540312325,
+            -101.65928753668045
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 179,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.218784621657615,
+            -101.67666277325254
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 180,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.1624049610673,
+            -101.75978369340444
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 181,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.188608546181904,
+            -101.65408448677604
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 182,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.08212076817103,
+            -101.6056902915433
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 183,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.21422035943422,
+            -101.67401114667526
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 184,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.12511299171222,
+            -101.75270758732275
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 185,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.15226730539891,
+            -101.66524055264499
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 186,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.12531243650082,
+            -101.62929349621672
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 187,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.090729906026795,
+            -101.68099743227138
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 188,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.119682631906326,
+            -101.62174743843532
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 189,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.120847664556038,
+            -101.75091371436424
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 190,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.14309772198792,
+            -101.65897555094774
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 191,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.1242999186545,
+            -101.63482589986724
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 192,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.11130009336775,
+            -101.71142174921398
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 193,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.131398642615576,
+            -101.75641177550897
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 194,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.144280357412566,
+            -101.60096413106731
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 195,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.115168006258536,
+            -101.64362048214134
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 196,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.210393978907252,
+            -101.67858797272876
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 197,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.131206620977558,
+            -101.71958877695637
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 198,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.07700918456981,
+            -101.66814840895238
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 199,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.20023610521268,
+            -101.63286592006213
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 200,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.13239164555603,
+            -101.65901097369697
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 201,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.099144432324596,
+            -101.67788229161403
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 202,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.097720764316293,
+            -101.67900222445782
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 203,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.130018039641243,
+            -101.6472414157187
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 204,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.18539475689564,
+            -101.6981986826234
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 205,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.158084430734966,
+            -101.59730751611124
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 206,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.168894781250728,
+            -101.62845127547027
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 207,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.11775661384214,
+            -101.66167207373172
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 208,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.062406338307664,
+            -101.73245159843165
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 209,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.04777207610821,
+            -101.70588609832724
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 210,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.081869533653748,
+            -101.6580762272308
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 211,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.139139426538033,
+            -101.67085926421977
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 212,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.165696356730272,
+            -101.66000332512715
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 213,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.089119932322898,
+            -101.64885447374522
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 214,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.121166043343464,
+            -101.60894814853587
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 215,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.090344883979945,
+            -101.71163947034402
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 216,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12853161272136,
+            -101.75916521140734
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 217,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.145642010741298,
+            -101.59462754098449
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 218,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.07284552794084,
+            -101.71094826589729
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 219,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.14931996985393,
+            -101.59001832390238
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 220,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.069841075255624,
+            -101.6478736267993
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 221,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.082745441007077,
+            -101.74292488424254
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 222,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.06495167190262,
+            -101.71200445587101
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 223,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.052132540050142,
+            -101.70833046169763
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 224,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.126925651030973,
+            -101.74202059492983
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 225,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.156965945532942,
+            -101.75761130004669
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 226,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.207292790954583,
+            -101.70779126349024
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 227,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.20466588505248,
+            -101.63469211745381
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 228,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.200887425622117,
+            -101.6309264088499
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 229,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.14684494672117,
+            -101.75977960037605
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 230,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.180459387950556,
+            -101.70407811712273
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 231,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.075794215710857,
+            -101.67752815459757
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 232,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.156918178775086,
+            -101.7472957368412
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 233,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.11093953222212,
+            -101.67564967944197
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 234,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.149889883575007,
+            -101.71859631554926
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 235,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.106235928277698,
+            -101.58374330287731
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 236,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.10435960530784,
+            -101.64949686216228
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 237,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.124420976732242,
+            -101.73002639355451
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 238,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.153491070494244,
+            -101.6507547640644
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 239,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.1040810898092,
+            -101.68877486952645
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 240,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.16519836228181,
+            -101.64350543003984
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 241,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.113625878367134,
+            -101.6031687863446
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 242,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.047538168372387,
+            -101.65193753202352
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 243,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.123222862078908,
+            -101.66872814733114
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 244,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.126048226009814,
+            -101.76370969250387
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 245,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.216613748093113,
+            -101.67959448581846
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 246,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.132809272515768,
+            -101.72477358677722
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 247,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.09764878636351,
+            -101.58572730071705
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 248,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.156073878611412,
+            -101.70836750788999
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 249,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.03999401149129,
+            -101.68622318049013
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 250,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.13264892312514,
+            -101.60242435142388
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 251,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.088849045356906,
+            -101.59203016969171
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 252,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.18661544849899,
+            -101.62654606637015
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 253,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.18817012776844,
+            -101.72328607134637
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 254,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.085083809447216,
+            -101.74853602042515
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 255,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.176152013798742,
+            -101.74315716111342
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 256,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.162750474397402,
+            -101.63457349186979
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 257,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.145159612605678,
+            -101.69358329824031
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 258,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.208337704291516,
+            -101.63512158929512
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 259,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.09831289611695,
+            -101.7238089325269
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 260,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.208001946696033,
+            -101.68612547423203
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 261,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.075924832415136,
+            -101.64043382843741
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 262,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.205319200796662,
+            -101.70434084017302
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 263,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.106250379695695,
+            -101.7337085862739
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 264,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.182518461693498,
+            -101.68201293882588
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 265,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.204027264012275,
+            -101.72627071942995
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 266,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.191508748702404,
+            -101.6618664871436
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 267,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.154553177287628,
+            -101.72760032356943
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 268,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.050719284523538,
+            -101.63477742518116
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 269,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.121787360854555,
+            -101.75088557773707
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 270,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.064973249828622,
+            -101.70537874413739
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 271,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.122485095146274,
+            -101.70928357853172
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 272,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.15344849237284,
+            -101.60610493240242
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 273,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.19288837464167,
+            -101.62353922567902
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 274,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.06972159988043,
+            -101.6474010228331
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 275,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.057782581539595,
+            -101.67708213480655
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 276,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.18681795564341,
+            -101.61622144153141
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 277,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.144263759816297,
+            -101.72190389035363
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 278,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.12401841204743,
+            -101.69862364417624
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 279,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.153431927190468,
+            -101.70247029746008
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 280,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.121894127824177,
+            -101.60462293504914
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 281,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.2027519077949,
+            -101.62955203224546
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 282,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.20668307357375,
+            -101.69854546678515
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 283,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16561383203087,
+            -101.72216328913093
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 284,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.07089063889404,
+            -101.74448332945249
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 285,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.12479484826072,
+            -101.63361880591012
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 286,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.089027995370426,
+            -101.69410751330463
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 287,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.121217431731896,
+            -101.7155554604495
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 288,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.207673538588338,
+            -101.63069989096296
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 289,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.187650888652676,
+            -101.61130368404548
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 290,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.151784892014007,
+            -101.63098697538086
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 291,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.144156265232773,
+            -101.7226938931745
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 292,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.144201444077048,
+            -101.67182050484082
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 293,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.105586964470593,
+            -101.64740631160166
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 294,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.21389467599002,
+            -101.69866685142715
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 295,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.082267718114924,
+            -101.65557887237118
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 296,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.076658823759484,
+            -101.6517714953103
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 297,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.112455119816246,
+            -101.76773773187426
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 298,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.123212373392647,
+            -101.69153421452621
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 299,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.12694339051369,
+            -101.72113562915588
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 300,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.101127720550803,
+            -101.63377335252615
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 301,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.069299299444452,
+            -101.64905031533559
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 302,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.206517192752123,
+            -101.63708708900913
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 303,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.17790832101941,
+            -101.64262790014399
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 304,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.15510683589922,
+            -101.62816266640611
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 305,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.166008782746573,
+            -101.72456428664334
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 306,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.13367082575386,
+            -101.66775563445904
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 307,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.150548489658394,
+            -101.6156174464404
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 308,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.116395119959947,
+            -101.57966178730948
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 309,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.150570596123753,
+            -101.75746578655472
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 310,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.111833722290733,
+            -101.73795810722588
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 311,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.131788190070033,
+            -101.7286030376663
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 312,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.132473647891867,
+            -101.59687925911717
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 313,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.15928146247735,
+            -101.74025102357551
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 314,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.184523573561474,
+            -101.64807693657896
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 315,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.11557739679501,
+            -101.60996414276083
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 316,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.1727861483151,
+            -101.74145512797736
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 317,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.18872890801812,
+            -101.70726001395397
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 318,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.164478886840442,
+            -101.75462154438675
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 319,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.114693754456606,
+            -101.69762037816504
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 320,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.14891387216011,
+            -101.68598280683298
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 321,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.152257969333753,
+            -101.69469296262241
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 322,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.163224331812057,
+            -101.59330062138893
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 323,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.125741862956612,
+            -101.69747125719049
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 324,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16880375858337,
+            -101.72279267644744
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 325,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.175759341486867,
+            -101.64888016031932
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 326,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.12076438006066,
+            -101.58720827632341
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 327,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.11098540575159,
+            -101.65477991263269
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 328,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.053758954617276,
+            -101.6377179920799
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 329,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.114179016989446,
+            -101.630287819102
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 330,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.123761311910535,
+            -101.59759910030375
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 331,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.208852585802838,
+            -101.66730754451811
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 332,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.166063164270206,
+            -101.60236684365461
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 333,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.084717951871266,
+            -101.69010313651076
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 334,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.07180945760975,
+            -101.69228771566132
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 335,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.06229510020881,
+            -101.65172111150126
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 336,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.157970809830033,
+            -101.61253973188704
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 337,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.056771740477846,
+            -101.65023781593462
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 338,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.18473001699714,
+            -101.70155023874497
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 339,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.2173343411282,
+            -101.66463683145332
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 340,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.15365953095535,
+            -101.6265326208561
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 341,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.104770557145397,
+            -101.62996004887732
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 342,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.05899001921024,
+            -101.68501331841645
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 343,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.159736574868035,
+            -101.75921798034916
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 344,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.150426151619847,
+            -101.72186840636954
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 345,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.117281061051827,
+            -101.68260130496826
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 346,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.11681753038591,
+            -101.58831601689957
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 347,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.1168926440366,
+            -101.7283383957381
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 348,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.198763447516658,
+            -101.62595379074499
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 349,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.049455577924586,
+            -101.66652301570852
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 350,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.132318522789177,
+            -101.68228309948873
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 351,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.084554930391086,
+            -101.62320632923218
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 352,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.11342223982159,
+            -101.7046852236364
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 353,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.13680275242506,
+            -101.68527557199388
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 354,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.142864967806894,
+            -101.6206523679557
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 355,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.122384311697438,
+            -101.60251900700086
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 356,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.076994802764492,
+            -101.63125975051993
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 357,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.162765029357843,
+            -101.58750910822901
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 358,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.088567461596046,
+            -101.67168946262157
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 359,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.194776460646956,
+            -101.69532555029708
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 360,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.168164969445996,
+            -101.66681045483811
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 361,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.140546641905345,
+            -101.61482544814848
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 362,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.04512027254053,
+            -101.6675433350788
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 363,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.08235620247369,
+            -101.6141204175871
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 364,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.050908053136936,
+            -101.62627014847241
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 365,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.186968441692553,
+            -101.64816119704963
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 366,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.052977365348376,
+            -101.67152959288562
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 367,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.166951984235833,
+            -101.60801377040299
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 368,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.142648713526096,
+            -101.64327460231378
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 369,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.195611046533298,
+            -101.6736037767811
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 370,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.042133883531065,
+            -101.64865926633364
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 371,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.06063479488293,
+            -101.65291317666365
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 372,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.059224401356047,
+            -101.72964169143351
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 373,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.124600714704446,
+            -101.61132215160355
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 374,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.175070302916588,
+            -101.59273530185479
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 375,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.13551815883819,
+            -101.60337614865124
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 376,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.113694476690032,
+            -101.5863755843324
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 377,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.12368548405304,
+            -101.65480663499899
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 378,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.185587066537067,
+            -101.63988577742481
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 379,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.092305442900567,
+            -101.58851947172967
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 380,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.173535970695017,
+            -101.69369001245022
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 381,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.054442774265116,
+            -101.65703832555991
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 382,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.16463233883283,
+            -101.60796454698777
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 383,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.090532195725853,
+            -101.67736859411234
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 384,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.112989655937916,
+            -101.67655390402824
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 385,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.11458154884485,
+            -101.59195150592141
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 386,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.145271397341592,
+            -101.6464742494525
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 387,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.194279584767337,
+            -101.61316171182284
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 388,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.064561165903907,
+            -101.64770668314695
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 389,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.08211749903083,
+            -101.68173694631786
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 390,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.158372724742232,
+            -101.59925746708468
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 391,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.082619694376643,
+            -101.67463790800335
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 392,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.114531496486897,
+            -101.62420909483954
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 393,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.161021255205746,
+            -101.6202798257656
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 394,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.11826375273312,
+            -101.57882620467197
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 395,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.130867918797925,
+            -101.65148931831847
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 396,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.164653598817605,
+            -101.66535106786763
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 397,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.158784527353784,
+            -101.59593279583869
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 398,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.08555964891724,
+            -101.71530532188392
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 399,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.09556933026267,
+            -101.66680004877095
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 400,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.11370656102382,
+            -101.67273042831376
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 401,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.189070674100044,
+            -101.72891065414508
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 402,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.088093270362677,
+            -101.64460906463046
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 403,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.13105025750997,
+            -101.70326513336455
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 404,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.16528952170152,
+            -101.70040841564658
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 405,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.183728278504923,
+            -101.6164894388552
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 406,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.132752993792522,
+            -101.6191854738884
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 407,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.208724855044064,
+            -101.70311910886761
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 408,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.123509187040764,
+            -101.60349507049065
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 409,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.074904449475692,
+            -101.74807827564288
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 410,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.19142668649693,
+            -101.6895624725811
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 411,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.079760232802563,
+            -101.62073497175035
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 412,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.07179938941505,
+            -101.73758571540398
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 413,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.206971780710266,
+            -101.67437512654284
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 414,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.09768648958291,
+            -101.7351637311746
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 415,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.17897064489566,
+            -101.62640453692886
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 416,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.13158377682272,
+            -101.72920649455598
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 417,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.0438611656754,
+            -101.69110690294902
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 418,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.10555403309104,
+            -101.69897922450632
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 419,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.147928737136503,
+            -101.64749608711936
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 420,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.143164976819804,
+            -101.6181301031095
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 421,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.188751912653554,
+            -101.649237303226
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 422,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.12690016816842,
+            -101.67806503568876
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 423,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.097326990329794,
+            -101.62717757695656
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 424,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.16639131970493,
+            -101.60516554263906
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 425,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.14365121896996,
+            -101.62158597581369
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 426,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.164427413253676,
+            -101.73128250272548
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 427,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.17541395023953,
+            -101.64405515833514
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 428,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.082085728549146,
+            -101.73365333436179
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 429,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.136312868900955,
+            -101.60589765108348
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 430,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.120111610316652,
+            -101.59703630248936
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 431,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.0694834992148,
+            -101.66445271714389
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 432,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.09387997878016,
+            -101.71929773817676
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 433,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.204535880430676,
+            -101.68479862487881
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 434,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.180032104397206,
+            -101.61218733123376
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 435,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.164212575572346,
+            -101.5875371417193
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 436,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.068884727876114,
+            -101.67442246371799
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 437,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.06935253656395,
+            -101.73940408723777
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 438,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.21154845508664,
+            -101.67517535163047
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 439,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.05732965698381,
+            -101.61915332297228
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 440,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.080150200128493,
+            -101.63237257057983
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 441,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.175812051426803,
+            -101.68688215453354
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 442,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.091102908687336,
+            -101.74184577612687
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 443,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.1804148820744,
+            -101.60247869575873
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 444,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.075952654245164,
+            -101.66788527787585
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 445,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.10203313389901,
+            -101.65634830820036
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 446,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.147125364184223,
+            -101.72564401225061
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 447,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.054091211210796,
+            -101.66114660732586
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 448,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.116027623699708,
+            -101.61128960209918
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 449,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.103776163827686,
+            -101.66006996402439
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 450,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.143690850085616,
+            -101.61832912299836
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 451,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.075668462916042,
+            -101.6139285462456
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 452,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.14580524501584,
+            -101.58687919595299
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 453,
+        "tipo": "instalaci\u00f3n sencilla",
+        "tiempo": 120,
+        "ubicacion": [
+            21.19906452285219,
+            -101.72277269045078
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 454,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.145086993335216,
+            -101.66916479944972
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 455,
+        "tipo": "mantenimiento sencillo",
+        "tiempo": 15,
+        "ubicacion": [
+            21.14916625782426,
+            -101.754264333532
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 456,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.177857970908924,
+            -101.60722485768365
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 457,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.139993062664107,
+            -101.64034558324659
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 458,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.204662370178482,
+            -101.69384582170679
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 459,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.14296508315766,
+            -101.75046954131543
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 460,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.158451107136724,
+            -101.66763924327599
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 461,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.114739381869118,
+            -101.5946254709778
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 462,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.093290075012998,
+            -101.71460185944026
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 463,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.16512455662827,
+            -101.70628705183384
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 464,
+        "tipo": "mantenimiento completo",
+        "tiempo": 60,
+        "ubicacion": [
+            21.149040772692114,
+            -101.67266027184442
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 465,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.122141958534844,
+            -101.6244492792911
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 466,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.174337485222686,
+            -101.6424881826143
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 467,
+        "tipo": "revisi\u00f3n por garant\u00eda",
+        "tiempo": 30,
+        "ubicacion": [
+            21.160521497084805,
+            -101.66384104969121
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 468,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.2015736106294,
+            -101.63743576990535
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 469,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.105809953536475,
+            -101.76626095497716
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 470,
+        "tipo": "revisi\u00f3n para instalar",
+        "tiempo": 20,
+        "ubicacion": [
+            21.061297267136233,
+            -101.61387943271649
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 471,
+        "tipo": "revisi\u00f3n por garant\u00eda de instalaciones externas",
+        "tiempo": 30,
+        "ubicacion": [
+            21.204004872614167,
+            -101.64994358107141
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 472,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.155269337627985,
+            -101.76473298710926
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 473,
+        "tipo": "entrega de mercanc\u00eda menor",
+        "tiempo": 10,
+        "ubicacion": [
+            21.142578641837563,
+            -101.58379643567879
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 474,
+        "tipo": "mantenimiento de hidro",
+        "tiempo": 15,
+        "ubicacion": [
+            21.097345523607707,
+            -101.60275260458766
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 475,
+        "tipo": "entrega de mercanc\u00eda mayor",
+        "tiempo": 30,
+        "ubicacion": [
+            21.118816797582582,
+            -101.64976953568686
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 476,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.097894456318528,
+            -101.68363565548438
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 477,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.05920477561092,
+            -101.7081581618537
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 478,
+        "tipo": "revisi\u00f3n externa",
+        "tiempo": 30,
+        "ubicacion": [
+            21.16704286650332,
+            -101.73796745596319
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 479,
+        "tipo": "instalaci\u00f3n avanzada",
+        "tiempo": 150,
+        "ubicacion": [
+            21.15501069895266,
+            -101.72005267792736
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    },
+    {
+        "id": 480,
+        "tipo": "instalaci\u00f3n completa",
+        "tiempo": 180,
+        "ubicacion": [
+            21.138173527093805,
+            -101.71328736569421
+        ],
+        "color": null,
+        "bloqueado": false,
+        "flotilla": null
+    }
+]
