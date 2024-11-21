@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1897e9db2d64a6a27b80862c6d0b058 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d1897e9db2d64a6a27b80862c6d0b058" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d1897e9db2d64a6a27b80862c6d0b058 = L.map(
+                "map_d1897e9db2d64a6a27b80862c6d0b058",
+                {
+                    center: [21.123619, -101.680496],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6a36386bc6cddf010daddf332d49e484 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6a36386bc6cddf010daddf332d49e484.addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+            var circle_marker_e2b2f378308846588ad2cba05c4d1178 = L.circleMarker(
+                [21.0703853207308, -101.67077339572911],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_3bcaa60af88090d8e407cb00cb8c0d9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9fff4c776765f35aeabf4a10096d7af = $(`<div id="html_b9fff4c776765f35aeabf4a10096d7af" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 1<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_3bcaa60af88090d8e407cb00cb8c0d9f.setContent(html_b9fff4c776765f35aeabf4a10096d7af);
+            
+        
+
+        circle_marker_e2b2f378308846588ad2cba05c4d1178.bindPopup(popup_3bcaa60af88090d8e407cb00cb8c0d9f)
+        ;
+
+        
+    
+    
+            var circle_marker_80159bec1cf5fb22fc36055f75fc1942 = L.circleMarker(
+                [21.192762381456944, -101.73263490021404],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_343ef3ebf3ed4851e13d55335f63bbad = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c69ef04249fe4e745848faf94cdc6863 = $(`<div id="html_c69ef04249fe4e745848faf94cdc6863" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 2<br>                     <b>Tipo:</b> mantenimiento completo<br>                     <b>Tiempo estimado:</b> 60<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_343ef3ebf3ed4851e13d55335f63bbad.setContent(html_c69ef04249fe4e745848faf94cdc6863);
+            
+        
+
+        circle_marker_80159bec1cf5fb22fc36055f75fc1942.bindPopup(popup_343ef3ebf3ed4851e13d55335f63bbad)
+        ;
+
+        
+    
+    
+            var circle_marker_5203a87bfa9030b4e14fd5f714f4156b = L.circleMarker(
+                [21.128792461866176, -101.65240009662587],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_617cf213c5df4b1f0b5a62fceeb74509 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_643dddbf10ff90122e274f59e2504065 = $(`<div id="html_643dddbf10ff90122e274f59e2504065" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 3<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_617cf213c5df4b1f0b5a62fceeb74509.setContent(html_643dddbf10ff90122e274f59e2504065);
+            
+        
+
+        circle_marker_5203a87bfa9030b4e14fd5f714f4156b.bindPopup(popup_617cf213c5df4b1f0b5a62fceeb74509)
+        ;
+
+        
+    
+    
+            var circle_marker_b04ff0ab6a51eb82d7c7e523b549f536 = L.circleMarker(
+                [21.06566709833153, -101.68256335747617],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_2f1b897adc1b80b9c0c95a8b40942256 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dfa636acbef9d0b2a3ed85d03f47f4dd = $(`<div id="html_dfa636acbef9d0b2a3ed85d03f47f4dd" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 4<br>                     <b>Tipo:</b> instalación sencilla<br>                     <b>Tiempo estimado:</b> 120<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_2f1b897adc1b80b9c0c95a8b40942256.setContent(html_dfa636acbef9d0b2a3ed85d03f47f4dd);
+            
+        
+
+        circle_marker_b04ff0ab6a51eb82d7c7e523b549f536.bindPopup(popup_2f1b897adc1b80b9c0c95a8b40942256)
+        ;
+
+        
+    
+    
+            var circle_marker_b56247c58324e2fdaa3f3c8b302cfb31 = L.circleMarker(
+                [21.100637888896284, -101.75866465831126],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_8087a8de296d325c12f94a0606a8dbb9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e3ab9ec70d393bc459d6a2e50d9388a = $(`<div id="html_8e3ab9ec70d393bc459d6a2e50d9388a" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 5<br>                     <b>Tipo:</b> revisión externa<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_8087a8de296d325c12f94a0606a8dbb9.setContent(html_8e3ab9ec70d393bc459d6a2e50d9388a);
+            
+        
+
+        circle_marker_b56247c58324e2fdaa3f3c8b302cfb31.bindPopup(popup_8087a8de296d325c12f94a0606a8dbb9)
+        ;
+
+        
+    
+    
+            var circle_marker_308016364075042078a54868e111ea39 = L.circleMarker(
+                [21.114535075168153, -101.61124066635861],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_1c1afcd5693fdfddf5c8461bf247ce35 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_008ec01aff3e520ec7ee09be0a300a7c = $(`<div id="html_008ec01aff3e520ec7ee09be0a300a7c" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 6<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_1c1afcd5693fdfddf5c8461bf247ce35.setContent(html_008ec01aff3e520ec7ee09be0a300a7c);
+            
+        
+
+        circle_marker_308016364075042078a54868e111ea39.bindPopup(popup_1c1afcd5693fdfddf5c8461bf247ce35)
+        ;
+
+        
+    
+    
+            var circle_marker_f4a11d4094400e41f47a562888bbb5a5 = L.circleMarker(
+                [21.173842494765296, -101.61744934233127],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_5254116b39fa56e09b39be41bcdb40a1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a455970fe4f51fbba25573c9c6169c5f = $(`<div id="html_a455970fe4f51fbba25573c9c6169c5f" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 7<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_5254116b39fa56e09b39be41bcdb40a1.setContent(html_a455970fe4f51fbba25573c9c6169c5f);
+            
+        
+
+        circle_marker_f4a11d4094400e41f47a562888bbb5a5.bindPopup(popup_5254116b39fa56e09b39be41bcdb40a1)
+        ;
+
+        
+    
+    
+            var circle_marker_1a202b5ac8a8106caf573c14deea8c13 = L.circleMarker(
+                [21.081827117888192, -101.69637161589013],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_ddb45825c780b5fcd76bc494d4c1b311 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0df8e3285d91c92c1111833b0d86437f = $(`<div id="html_0df8e3285d91c92c1111833b0d86437f" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 8<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_ddb45825c780b5fcd76bc494d4c1b311.setContent(html_0df8e3285d91c92c1111833b0d86437f);
+            
+        
+
+        circle_marker_1a202b5ac8a8106caf573c14deea8c13.bindPopup(popup_ddb45825c780b5fcd76bc494d4c1b311)
+        ;
+
+        
+    
+    
+            var circle_marker_4d8870d7f4edcc12dccccdbe1bc92a3c = L.circleMarker(
+                [21.163093181848417, -101.63870877674428],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_d715dc6480e9fa4e3aa198305a89237e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5ee5df3b9d94097af57f58fcabe83a9f = $(`<div id="html_5ee5df3b9d94097af57f58fcabe83a9f" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 9<br>                     <b>Tipo:</b> mantenimiento completo<br>                     <b>Tiempo estimado:</b> 60<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_d715dc6480e9fa4e3aa198305a89237e.setContent(html_5ee5df3b9d94097af57f58fcabe83a9f);
+            
+        
+
+        circle_marker_4d8870d7f4edcc12dccccdbe1bc92a3c.bindPopup(popup_d715dc6480e9fa4e3aa198305a89237e)
+        ;
+
+        
+    
+    
+            var circle_marker_43d6e8f8251f7cfe765d4b390b56f90c = L.circleMarker(
+                [21.172817538522906, -101.65277622267348],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_809309db620b704ca721ba0897366f2d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34be089a44633473a29530d5f664d091 = $(`<div id="html_34be089a44633473a29530d5f664d091" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 10<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_809309db620b704ca721ba0897366f2d.setContent(html_34be089a44633473a29530d5f664d091);
+            
+        
+
+        circle_marker_43d6e8f8251f7cfe765d4b390b56f90c.bindPopup(popup_809309db620b704ca721ba0897366f2d)
+        ;
+
+        
+    
+    
+            var circle_marker_804d56e88b343081daefdbae64afa372 = L.circleMarker(
+                [21.056384360869156, -101.6314183277024],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_4cb875705ba8d485d7d723e5128e65e4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83931499c499c1826e49fafa3befeb45 = $(`<div id="html_83931499c499c1826e49fafa3befeb45" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 11<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_4cb875705ba8d485d7d723e5128e65e4.setContent(html_83931499c499c1826e49fafa3befeb45);
+            
+        
+
+        circle_marker_804d56e88b343081daefdbae64afa372.bindPopup(popup_4cb875705ba8d485d7d723e5128e65e4)
+        ;
+
+        
+    
+    
+            var circle_marker_5a4ac9fde037f23c7eeaf2da42a64b79 = L.circleMarker(
+                [21.11076627974433, -101.60451566153472],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_8ce3d56cd8a2afa760193c8b1e619078 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3cb86ad6fff9157d4d743afa67c051f6 = $(`<div id="html_3cb86ad6fff9157d4d743afa67c051f6" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 12<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_8ce3d56cd8a2afa760193c8b1e619078.setContent(html_3cb86ad6fff9157d4d743afa67c051f6);
+            
+        
+
+        circle_marker_5a4ac9fde037f23c7eeaf2da42a64b79.bindPopup(popup_8ce3d56cd8a2afa760193c8b1e619078)
+        ;
+
+        
+    
+    
+            var circle_marker_3e138bdee6160c53b1b4800d7ada298a = L.circleMarker(
+                [21.144764509788516, -101.76636698864172],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_3c8a6275522d9e1943e4d485da9b4305 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cef4824e53c8de46c56f85d8255cb093 = $(`<div id="html_cef4824e53c8de46c56f85d8255cb093" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 13<br>                     <b>Tipo:</b> entrega de mercancía menor<br>                     <b>Tiempo estimado:</b> 10<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_3c8a6275522d9e1943e4d485da9b4305.setContent(html_cef4824e53c8de46c56f85d8255cb093);
+            
+        
+
+        circle_marker_3e138bdee6160c53b1b4800d7ada298a.bindPopup(popup_3c8a6275522d9e1943e4d485da9b4305)
+        ;
+
+        
+    
+    
+            var circle_marker_faa7f8d8411ec55c8b52d114ec8a286c = L.circleMarker(
+                [21.168531006664086, -101.62770444219],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_09eea18219e7e0fe4f3638540020e9fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c4da643c89449f0701e777c7aac95c99 = $(`<div id="html_c4da643c89449f0701e777c7aac95c99" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 14<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_09eea18219e7e0fe4f3638540020e9fb.setContent(html_c4da643c89449f0701e777c7aac95c99);
+            
+        
+
+        circle_marker_faa7f8d8411ec55c8b52d114ec8a286c.bindPopup(popup_09eea18219e7e0fe4f3638540020e9fb)
+        ;
+
+        
+    
+    
+            var circle_marker_bd0f072966b722bc7a5f20d4dbe78913 = L.circleMarker(
+                [21.056651227777483, -101.73089044983486],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_1f2f92d1d2c25fd1376d8454b3d249e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d64220590162951d3a0cec62b6617cd = $(`<div id="html_8d64220590162951d3a0cec62b6617cd" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 15<br>                     <b>Tipo:</b> revisión por garantía de instalaciones externas<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_1f2f92d1d2c25fd1376d8454b3d249e2.setContent(html_8d64220590162951d3a0cec62b6617cd);
+            
+        
+
+        circle_marker_bd0f072966b722bc7a5f20d4dbe78913.bindPopup(popup_1f2f92d1d2c25fd1376d8454b3d249e2)
+        ;
+
+        
+    
+    
+            var circle_marker_d5f76e57792eaafd74b057a08646b834 = L.circleMarker(
+                [21.13525880694925, -101.71714700646358],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_4f878bf19acbe38d13fcbb1dae1f5dfa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ce68930f673b2fd9539992df91e66fc4 = $(`<div id="html_ce68930f673b2fd9539992df91e66fc4" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 16<br>                     <b>Tipo:</b> revisión externa<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_4f878bf19acbe38d13fcbb1dae1f5dfa.setContent(html_ce68930f673b2fd9539992df91e66fc4);
+            
+        
+
+        circle_marker_d5f76e57792eaafd74b057a08646b834.bindPopup(popup_4f878bf19acbe38d13fcbb1dae1f5dfa)
+        ;
+
+        
+    
+    
+            var circle_marker_0886b1ac5ff37d4c9e1426144aafcc97 = L.circleMarker(
+                [21.14441959551537, -101.63745316608521],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_a9c55c505eb12221f2f12249686c43d1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be085e28c2057e0c2809c81d6959e3a1 = $(`<div id="html_be085e28c2057e0c2809c81d6959e3a1" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 17<br>                     <b>Tipo:</b> instalación sencilla<br>                     <b>Tiempo estimado:</b> 120<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_a9c55c505eb12221f2f12249686c43d1.setContent(html_be085e28c2057e0c2809c81d6959e3a1);
+            
+        
+
+        circle_marker_0886b1ac5ff37d4c9e1426144aafcc97.bindPopup(popup_a9c55c505eb12221f2f12249686c43d1)
+        ;
+
+        
+    
+    
+            var circle_marker_c765947b9e67f4b94ac6ab3104886fd6 = L.circleMarker(
+                [21.15489386947683, -101.72438771213515],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_37d1729fe1eb8f0b9836e799dc27e01b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a9f5e24a6b5e5caf9a37654ff1b7d6a4 = $(`<div id="html_a9f5e24a6b5e5caf9a37654ff1b7d6a4" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 18<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_37d1729fe1eb8f0b9836e799dc27e01b.setContent(html_a9f5e24a6b5e5caf9a37654ff1b7d6a4);
+            
+        
+
+        circle_marker_c765947b9e67f4b94ac6ab3104886fd6.bindPopup(popup_37d1729fe1eb8f0b9836e799dc27e01b)
+        ;
+
+        
+    
+    
+            var circle_marker_3ef680fd9719f7b962d6fda943244bc9 = L.circleMarker(
+                [21.20756973471846, -101.69221858060715],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_2bdfae9999c7e3b67534c589edf5a034 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1cc406829870f8f6e40728815e254616 = $(`<div id="html_1cc406829870f8f6e40728815e254616" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 19<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_2bdfae9999c7e3b67534c589edf5a034.setContent(html_1cc406829870f8f6e40728815e254616);
+            
+        
+
+        circle_marker_3ef680fd9719f7b962d6fda943244bc9.bindPopup(popup_2bdfae9999c7e3b67534c589edf5a034)
+        ;
+
+        
+    
+    
+            var circle_marker_07f43bd159ec9dc54309ab2b0068c0c4 = L.circleMarker(
+                [21.068676905801194, -101.6676411190498],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_a451f3a901d7c2a04ab83c87f61c1652 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd0adc16d21900e20f4dbb197e035cef = $(`<div id="html_fd0adc16d21900e20f4dbb197e035cef" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 20<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_a451f3a901d7c2a04ab83c87f61c1652.setContent(html_fd0adc16d21900e20f4dbb197e035cef);
+            
+        
+
+        circle_marker_07f43bd159ec9dc54309ab2b0068c0c4.bindPopup(popup_a451f3a901d7c2a04ab83c87f61c1652)
+        ;
+
+        
+    
+    
+            var circle_marker_ee1677f8aef152d396b45fb350d3123c = L.circleMarker(
+                [21.087327165946764, -101.71543840118746],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_4d27e372f66068e4ce210384bb7bb380 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6b5cf358ab3a1ee6aa2eb9ac97d0301 = $(`<div id="html_f6b5cf358ab3a1ee6aa2eb9ac97d0301" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 21<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_4d27e372f66068e4ce210384bb7bb380.setContent(html_f6b5cf358ab3a1ee6aa2eb9ac97d0301);
+            
+        
+
+        circle_marker_ee1677f8aef152d396b45fb350d3123c.bindPopup(popup_4d27e372f66068e4ce210384bb7bb380)
+        ;
+
+        
+    
+    
+            var circle_marker_646b8ce831fad33a86fbeb5ce9692c8c = L.circleMarker(
+                [21.11441524685579, -101.61634134197357],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_a3146eb10eae32f561c5e79dface6946 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1458ee43ae7cdf33612156681681f900 = $(`<div id="html_1458ee43ae7cdf33612156681681f900" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 22<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_a3146eb10eae32f561c5e79dface6946.setContent(html_1458ee43ae7cdf33612156681681f900);
+            
+        
+
+        circle_marker_646b8ce831fad33a86fbeb5ce9692c8c.bindPopup(popup_a3146eb10eae32f561c5e79dface6946)
+        ;
+
+        
+    
+    
+            var circle_marker_98494be9b3ab89a739473fbe0cd67717 = L.circleMarker(
+                [21.175634961278902, -101.6352445047632],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_596d9994ffbfb134029212a9822c8ccb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc025993c1724b4113b30e27e8d91785 = $(`<div id="html_bc025993c1724b4113b30e27e8d91785" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 23<br>                     <b>Tipo:</b> revisión para instalar<br>                     <b>Tiempo estimado:</b> 20<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_596d9994ffbfb134029212a9822c8ccb.setContent(html_bc025993c1724b4113b30e27e8d91785);
+            
+        
+
+        circle_marker_98494be9b3ab89a739473fbe0cd67717.bindPopup(popup_596d9994ffbfb134029212a9822c8ccb)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d0993d0ac6bdd8f1bbfccee2b7fd61 = L.circleMarker(
+                [21.149447717816102, -101.71257932916006],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_16f5daccaf6f87af9f2ecee55541f629 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b93443d0dfa0471c72fdcc581194f0c = $(`<div id="html_1b93443d0dfa0471c72fdcc581194f0c" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 24<br>                     <b>Tipo:</b> revisión para instalar<br>                     <b>Tiempo estimado:</b> 20<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_16f5daccaf6f87af9f2ecee55541f629.setContent(html_1b93443d0dfa0471c72fdcc581194f0c);
+            
+        
+
+        circle_marker_b9d0993d0ac6bdd8f1bbfccee2b7fd61.bindPopup(popup_16f5daccaf6f87af9f2ecee55541f629)
+        ;
+
+        
+    
+    
+            var circle_marker_9090d02cecd99916f109e2b8fdfc546e = L.circleMarker(
+                [21.05535312390501, -101.71423157924228],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_eef40cba083be995c9bf2e70e366dc61 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fc6bd52f621535bdc0b9151525f1e198 = $(`<div id="html_fc6bd52f621535bdc0b9151525f1e198" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 25<br>                     <b>Tipo:</b> revisión por garantía<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_eef40cba083be995c9bf2e70e366dc61.setContent(html_fc6bd52f621535bdc0b9151525f1e198);
+            
+        
+
+        circle_marker_9090d02cecd99916f109e2b8fdfc546e.bindPopup(popup_eef40cba083be995c9bf2e70e366dc61)
+        ;
+
+        
+    
+    
+            var circle_marker_7c3223d21c8d2f33bb26a4b0632752b5 = L.circleMarker(
+                [21.112752611131434, -101.63350054168362],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_ef025d67aa4619c3fb94bab94bd64533 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_117be7471aeec309b9d4829ac4e1ed2a = $(`<div id="html_117be7471aeec309b9d4829ac4e1ed2a" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 26<br>                     <b>Tipo:</b> instalación sencilla<br>                     <b>Tiempo estimado:</b> 120<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_ef025d67aa4619c3fb94bab94bd64533.setContent(html_117be7471aeec309b9d4829ac4e1ed2a);
+            
+        
+
+        circle_marker_7c3223d21c8d2f33bb26a4b0632752b5.bindPopup(popup_ef025d67aa4619c3fb94bab94bd64533)
+        ;
+
+        
+    
+    
+            var circle_marker_343414b4c969f505b7c4aecdf3398421 = L.circleMarker(
+                [21.063974028315805, -101.70614043850529],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_b9988cd21547912cc7d97f5aa68d6425 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ffc5fc4867bb3f677298c096c2e41956 = $(`<div id="html_ffc5fc4867bb3f677298c096c2e41956" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 27<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_b9988cd21547912cc7d97f5aa68d6425.setContent(html_ffc5fc4867bb3f677298c096c2e41956);
+            
+        
+
+        circle_marker_343414b4c969f505b7c4aecdf3398421.bindPopup(popup_b9988cd21547912cc7d97f5aa68d6425)
+        ;
+
+        
+    
+    
+            var circle_marker_e15cc37b184521c0254495a0a0d6b282 = L.circleMarker(
+                [21.201595165299285, -101.64856869488614],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_f5f52b531120d343957817320a71acd4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0be71c60ca8f2a2918f3d52875cdf424 = $(`<div id="html_0be71c60ca8f2a2918f3d52875cdf424" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 28<br>                     <b>Tipo:</b> instalación sencilla<br>                     <b>Tiempo estimado:</b> 120<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_f5f52b531120d343957817320a71acd4.setContent(html_0be71c60ca8f2a2918f3d52875cdf424);
+            
+        
+
+        circle_marker_e15cc37b184521c0254495a0a0d6b282.bindPopup(popup_f5f52b531120d343957817320a71acd4)
+        ;
+
+        
+    
+    
+            var circle_marker_f23e0eadeba42bb1b84a486b17137d8e = L.circleMarker(
+                [21.163505715783486, -101.70083293172205],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_d9e6dc9ce69b77b9ee969a35f8d940b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_707ea0bb34eaa20e463d86bee9643d77 = $(`<div id="html_707ea0bb34eaa20e463d86bee9643d77" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 29<br>                     <b>Tipo:</b> revisión por garantía<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_d9e6dc9ce69b77b9ee969a35f8d940b4.setContent(html_707ea0bb34eaa20e463d86bee9643d77);
+            
+        
+
+        circle_marker_f23e0eadeba42bb1b84a486b17137d8e.bindPopup(popup_d9e6dc9ce69b77b9ee969a35f8d940b4)
+        ;
+
+        
+    
+    
+            var circle_marker_9e491c96ab9ab0a78e9789f4604786f3 = L.circleMarker(
+                [21.074321073969625, -101.71704465674665],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_86069c44a89571eaac3d5129f7e68549 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_216af39afb3f6eb09c66327f9e244780 = $(`<div id="html_216af39afb3f6eb09c66327f9e244780" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 30<br>                     <b>Tipo:</b> mantenimiento sencillo<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_86069c44a89571eaac3d5129f7e68549.setContent(html_216af39afb3f6eb09c66327f9e244780);
+            
+        
+
+        circle_marker_9e491c96ab9ab0a78e9789f4604786f3.bindPopup(popup_86069c44a89571eaac3d5129f7e68549)
+        ;
+
+        
+    
+    
+            var circle_marker_bf2a831bb79c0a09019f73c7a3559e8b = L.circleMarker(
+                [21.137007287423508, -101.60748987277383],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_df7b5063740167e2da9e70fba64d77f2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0f1fb655d0adee1806633593c1527b4f = $(`<div id="html_0f1fb655d0adee1806633593c1527b4f" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 31<br>                     <b>Tipo:</b> revisión por garantía de instalaciones externas<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_df7b5063740167e2da9e70fba64d77f2.setContent(html_0f1fb655d0adee1806633593c1527b4f);
+            
+        
+
+        circle_marker_bf2a831bb79c0a09019f73c7a3559e8b.bindPopup(popup_df7b5063740167e2da9e70fba64d77f2)
+        ;
+
+        
+    
+    
+            var circle_marker_af686472e5382c381e8f08e9f05e63e0 = L.circleMarker(
+                [21.203137603653428, -101.65164564407512],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_bd65658b8df7876eeed75b0069bf0209 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2a567885a2b857a3948e98b2a4f5a6ee = $(`<div id="html_2a567885a2b857a3948e98b2a4f5a6ee" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 32<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_bd65658b8df7876eeed75b0069bf0209.setContent(html_2a567885a2b857a3948e98b2a4f5a6ee);
+            
+        
+
+        circle_marker_af686472e5382c381e8f08e9f05e63e0.bindPopup(popup_bd65658b8df7876eeed75b0069bf0209)
+        ;
+
+        
+    
+    
+            var circle_marker_c5f66d4e861c4a6b91b25f273ee7b88b = L.circleMarker(
+                [21.082304545161254, -101.7271198772653],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_cf215b39afd2b369e7061adf136765c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eb6c673bf25574d19685efcfa03fb71e = $(`<div id="html_eb6c673bf25574d19685efcfa03fb71e" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 33<br>                     <b>Tipo:</b> entrega de mercancía menor<br>                     <b>Tiempo estimado:</b> 10<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_cf215b39afd2b369e7061adf136765c9.setContent(html_eb6c673bf25574d19685efcfa03fb71e);
+            
+        
+
+        circle_marker_c5f66d4e861c4a6b91b25f273ee7b88b.bindPopup(popup_cf215b39afd2b369e7061adf136765c9)
+        ;
+
+        
+    
+    
+            var circle_marker_fe9300f22df00d160f826538d76843e3 = L.circleMarker(
+                [21.12643195092021, -101.62482752546082],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_35fa2d89560438843c5070b7e35a109a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e18d9b1391e6cb4f7b5ab4f3bfaa7968 = $(`<div id="html_e18d9b1391e6cb4f7b5ab4f3bfaa7968" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 34<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_35fa2d89560438843c5070b7e35a109a.setContent(html_e18d9b1391e6cb4f7b5ab4f3bfaa7968);
+            
+        
+
+        circle_marker_fe9300f22df00d160f826538d76843e3.bindPopup(popup_35fa2d89560438843c5070b7e35a109a)
+        ;
+
+        
+    
+    
+            var circle_marker_27021fdf03268cf72a7d765e8fe2a863 = L.circleMarker(
+                [21.20993401577869, -101.71178328164659],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_3eaba317b663c8670f1277ca4cbfbbef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e73370ee0705c6fc382dd60cf0061479 = $(`<div id="html_e73370ee0705c6fc382dd60cf0061479" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 35<br>                     <b>Tipo:</b> revisión por garantía de instalaciones externas<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_3eaba317b663c8670f1277ca4cbfbbef.setContent(html_e73370ee0705c6fc382dd60cf0061479);
+            
+        
+
+        circle_marker_27021fdf03268cf72a7d765e8fe2a863.bindPopup(popup_3eaba317b663c8670f1277ca4cbfbbef)
+        ;
+
+        
+    
+    
+            var circle_marker_89b82af20703329d4212458f25dc09a5 = L.circleMarker(
+                [21.09528051078504, -101.73096046573771],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_8574e9aab911f870f5ac29a936d35fdb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44cfefa5b5e9301c5eafb31a49e55bd6 = $(`<div id="html_44cfefa5b5e9301c5eafb31a49e55bd6" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 36<br>                     <b>Tipo:</b> revisión externa<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_8574e9aab911f870f5ac29a936d35fdb.setContent(html_44cfefa5b5e9301c5eafb31a49e55bd6);
+            
+        
+
+        circle_marker_89b82af20703329d4212458f25dc09a5.bindPopup(popup_8574e9aab911f870f5ac29a936d35fdb)
+        ;
+
+        
+    
+    
+            var circle_marker_1e46cd55ed91aa149a7ab5720a13003d = L.circleMarker(
+                [21.132894342715208, -101.6015437901938],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_192eea5a46fe361c4decee815a264b97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bb7aeec5b927406ac813d6a64142387e = $(`<div id="html_bb7aeec5b927406ac813d6a64142387e" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 37<br>                     <b>Tipo:</b> revisión externa<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_192eea5a46fe361c4decee815a264b97.setContent(html_bb7aeec5b927406ac813d6a64142387e);
+            
+        
+
+        circle_marker_1e46cd55ed91aa149a7ab5720a13003d.bindPopup(popup_192eea5a46fe361c4decee815a264b97)
+        ;
+
+        
+    
+    
+            var circle_marker_4c224cb1f2a2519940eec5389b36bb1e = L.circleMarker(
+                [21.067377976380232, -101.69209165734654],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_c32a1b85392f7bf5e4a9d705a2ed6f9b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aaefaf10fcb4bd0a7bbf20862ffad399 = $(`<div id="html_aaefaf10fcb4bd0a7bbf20862ffad399" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 38<br>                     <b>Tipo:</b> instalación sencilla<br>                     <b>Tiempo estimado:</b> 120<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_c32a1b85392f7bf5e4a9d705a2ed6f9b.setContent(html_aaefaf10fcb4bd0a7bbf20862ffad399);
+            
+        
+
+        circle_marker_4c224cb1f2a2519940eec5389b36bb1e.bindPopup(popup_c32a1b85392f7bf5e4a9d705a2ed6f9b)
+        ;
+
+        
+    
+    
+            var circle_marker_5a8373860203d0a28f2ed97bae6a9c36 = L.circleMarker(
+                [21.100556057870957, -101.75873480691583],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_10d21563906053445014805d9616f80a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7672ff46df8ef8cafeaa5c41bc6f764a = $(`<div id="html_7672ff46df8ef8cafeaa5c41bc6f764a" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 39<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_10d21563906053445014805d9616f80a.setContent(html_7672ff46df8ef8cafeaa5c41bc6f764a);
+            
+        
+
+        circle_marker_5a8373860203d0a28f2ed97bae6a9c36.bindPopup(popup_10d21563906053445014805d9616f80a)
+        ;
+
+        
+    
+    
+            var circle_marker_7cc49aff4c11db684f66a6e552ab4106 = L.circleMarker(
+                [21.074098746498777, -101.60727291733748],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_40d5183ce54bfee23def30963bdc2a33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_06d8e3b4410926e3f0cfc9163f378713 = $(`<div id="html_06d8e3b4410926e3f0cfc9163f378713" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 40<br>                     <b>Tipo:</b> mantenimiento completo<br>                     <b>Tiempo estimado:</b> 60<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_40d5183ce54bfee23def30963bdc2a33.setContent(html_06d8e3b4410926e3f0cfc9163f378713);
+            
+        
+
+        circle_marker_7cc49aff4c11db684f66a6e552ab4106.bindPopup(popup_40d5183ce54bfee23def30963bdc2a33)
+        ;
+
+        
+    
+    
+            var circle_marker_18af523b7c72cf0a1aed40fd8316fba0 = L.circleMarker(
+                [21.10394197300812, -101.58100312109433],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_d72b5c27d30f48a0be8a33c928194e52 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_73365c0642dd5ef61baf4169bbacadbf = $(`<div id="html_73365c0642dd5ef61baf4169bbacadbf" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 41<br>                     <b>Tipo:</b> revisión por garantía de instalaciones externas<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_d72b5c27d30f48a0be8a33c928194e52.setContent(html_73365c0642dd5ef61baf4169bbacadbf);
+            
+        
+
+        circle_marker_18af523b7c72cf0a1aed40fd8316fba0.bindPopup(popup_d72b5c27d30f48a0be8a33c928194e52)
+        ;
+
+        
+    
+    
+            var circle_marker_9a39ecdd4f1a8a270c6df41db84666d0 = L.circleMarker(
+                [21.120829927960614, -101.6759999660287],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_1ff8e26e6431c5499b24f27bf1a002bb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0cc9929f0ec76e57ff28b04e29684c0 = $(`<div id="html_a0cc9929f0ec76e57ff28b04e29684c0" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 42<br>                     <b>Tipo:</b> revisión para instalar<br>                     <b>Tiempo estimado:</b> 20<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_1ff8e26e6431c5499b24f27bf1a002bb.setContent(html_a0cc9929f0ec76e57ff28b04e29684c0);
+            
+        
+
+        circle_marker_9a39ecdd4f1a8a270c6df41db84666d0.bindPopup(popup_1ff8e26e6431c5499b24f27bf1a002bb)
+        ;
+
+        
+    
+    
+            var circle_marker_739ab7fd3e09942640ef2cb2036d9d06 = L.circleMarker(
+                [21.064905865108695, -101.6306081165853],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_ca218d59fbff3d6f648be4d0f95fcfcd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe66cf1ecddf28bcaa75cde132aca663 = $(`<div id="html_fe66cf1ecddf28bcaa75cde132aca663" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 43<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_ca218d59fbff3d6f648be4d0f95fcfcd.setContent(html_fe66cf1ecddf28bcaa75cde132aca663);
+            
+        
+
+        circle_marker_739ab7fd3e09942640ef2cb2036d9d06.bindPopup(popup_ca218d59fbff3d6f648be4d0f95fcfcd)
+        ;
+
+        
+    
+    
+            var circle_marker_91f4504b42107836d049a2943a144b1e = L.circleMarker(
+                [21.097661024461836, -101.70049055923765],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_c58ee30ba9a17ee1948db8a2574259e9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e96d6356fcc452d9684a047ef527c504 = $(`<div id="html_e96d6356fcc452d9684a047ef527c504" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 44<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_c58ee30ba9a17ee1948db8a2574259e9.setContent(html_e96d6356fcc452d9684a047ef527c504);
+            
+        
+
+        circle_marker_91f4504b42107836d049a2943a144b1e.bindPopup(popup_c58ee30ba9a17ee1948db8a2574259e9)
+        ;
+
+        
+    
+    
+            var circle_marker_0547dcd735e0c2efef7b80d08879f2ff = L.circleMarker(
+                [21.168409087433076, -101.58834686405683],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_57f88b5f4483d6204d9330ef3d009eec = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6bbff710fe8df84c7ceae80477bcb363 = $(`<div id="html_6bbff710fe8df84c7ceae80477bcb363" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 45<br>                     <b>Tipo:</b> revisión por garantía de instalaciones externas<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_57f88b5f4483d6204d9330ef3d009eec.setContent(html_6bbff710fe8df84c7ceae80477bcb363);
+            
+        
+
+        circle_marker_0547dcd735e0c2efef7b80d08879f2ff.bindPopup(popup_57f88b5f4483d6204d9330ef3d009eec)
+        ;
+
+        
+    
+    
+            var circle_marker_b8f5e142356e9ae67f86c73d5b93cd63 = L.circleMarker(
+                [21.11911663757775, -101.58634097679253],
+                {"bubblingMouseEvents": true, "color": "#ff954e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff954e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_08ef62e6ee7decd36ccf3d19f86bd07f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b763b349519f9126c1dcdcffc7194d5 = $(`<div id="html_2b763b349519f9126c1dcdcffc7194d5" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 46<br>                     <b>Tipo:</b> mantenimiento sencillo<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (1.0, 0.5877852522924732, 0.30901699437494745, 1.0)                     </div>`)[0];
+                popup_08ef62e6ee7decd36ccf3d19f86bd07f.setContent(html_2b763b349519f9126c1dcdcffc7194d5);
+            
+        
+
+        circle_marker_b8f5e142356e9ae67f86c73d5b93cd63.bindPopup(popup_08ef62e6ee7decd36ccf3d19f86bd07f)
+        ;
+
+        
+    
+    
+            var circle_marker_85e5439caacb7a9ba14ac81070a892b7 = L.circleMarker(
+                [21.2054179838658, -101.66437722012091],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_a6f8ae8f570da80da4dde4c40b524d82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b6179a5e66c66045e60ca8095dcf609 = $(`<div id="html_2b6179a5e66c66045e60ca8095dcf609" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 47<br>                     <b>Tipo:</b> mantenimiento sencillo<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_a6f8ae8f570da80da4dde4c40b524d82.setContent(html_2b6179a5e66c66045e60ca8095dcf609);
+            
+        
+
+        circle_marker_85e5439caacb7a9ba14ac81070a892b7.bindPopup(popup_a6f8ae8f570da80da4dde4c40b524d82)
+        ;
+
+        
+    
+    
+            var circle_marker_ba53e204bec184570da3eecdcf7afdb5 = L.circleMarker(
+                [21.203589003588483, -101.67431834731055],
+                {"bubblingMouseEvents": true, "color": "#4cf2ce", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cf2ce", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_5917dd54e2f7e370f546f4fdc29d7bd1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3fae56b8b469a6c3addb7cb7e41eeb35 = $(`<div id="html_3fae56b8b469a6c3addb7cb7e41eeb35" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 48<br>                     <b>Tipo:</b> revisión por garantía<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.30000000000000004, 0.9510565162951535, 0.8090169943749475, 1.0)                     </div>`)[0];
+                popup_5917dd54e2f7e370f546f4fdc29d7bd1.setContent(html_3fae56b8b469a6c3addb7cb7e41eeb35);
+            
+        
+
+        circle_marker_ba53e204bec184570da3eecdcf7afdb5.bindPopup(popup_5917dd54e2f7e370f546f4fdc29d7bd1)
+        ;
+
+        
+    
+    
+            var circle_marker_1adfaa2f8ea51f0d1865e35ee449309a = L.circleMarker(
+                [21.108663543616917, -101.75042730138598],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_e5e5e1de6b985d3e9a03bfe20e934a5f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_652a121adda284752c9ed95a46db47bc = $(`<div id="html_652a121adda284752c9ed95a46db47bc" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 49<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_e5e5e1de6b985d3e9a03bfe20e934a5f.setContent(html_652a121adda284752c9ed95a46db47bc);
+            
+        
+
+        circle_marker_1adfaa2f8ea51f0d1865e35ee449309a.bindPopup(popup_e5e5e1de6b985d3e9a03bfe20e934a5f)
+        ;
+
+        
+    
+    
+            var circle_marker_3567a9320c02d0ba09fd137da5c88668 = L.circleMarker(
+                [21.067358574087745, -101.72909759042105],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_92e2941375f0217aa8af7abfc9580b7a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3bd929fc07f7003364e38f14f244a0f4 = $(`<div id="html_3bd929fc07f7003364e38f14f244a0f4" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 50<br>                     <b>Tipo:</b> mantenimiento de hidro<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_92e2941375f0217aa8af7abfc9580b7a.setContent(html_3bd929fc07f7003364e38f14f244a0f4);
+            
+        
+
+        circle_marker_3567a9320c02d0ba09fd137da5c88668.bindPopup(popup_92e2941375f0217aa8af7abfc9580b7a)
+        ;
+
+        
+    
+    
+            var circle_marker_101f47c90cfca6413cf5aae72ff9e6d2 = L.circleMarker(
+                [21.069369844964346, -101.62698276004677],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_e640e960ac9ed63905c2fa210a943225 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7b7fbec45cfb7d91612c33ffe8cc8115 = $(`<div id="html_7b7fbec45cfb7d91612c33ffe8cc8115" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 51<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_e640e960ac9ed63905c2fa210a943225.setContent(html_7b7fbec45cfb7d91612c33ffe8cc8115);
+            
+        
+
+        circle_marker_101f47c90cfca6413cf5aae72ff9e6d2.bindPopup(popup_e640e960ac9ed63905c2fa210a943225)
+        ;
+
+        
+    
+    
+            var circle_marker_ddf4de60392dd35eebefbf4ce5ae4327 = L.circleMarker(
+                [21.11405394135257, -101.72516588080941],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_a45f2ea170687b0b1c5fd2c1d5179402 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4d8b67e53485a62ad41009c4eda08a0 = $(`<div id="html_f4d8b67e53485a62ad41009c4eda08a0" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 52<br>                     <b>Tipo:</b> revisión por garantía<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_a45f2ea170687b0b1c5fd2c1d5179402.setContent(html_f4d8b67e53485a62ad41009c4eda08a0);
+            
+        
+
+        circle_marker_ddf4de60392dd35eebefbf4ce5ae4327.bindPopup(popup_a45f2ea170687b0b1c5fd2c1d5179402)
+        ;
+
+        
+    
+    
+            var circle_marker_aa59bedd6e3db012a19fcf7b220e16bb = L.circleMarker(
+                [21.120990552122482, -101.70804616755834],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_d7be11f826d03049bf7e34d64406ca4a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9c09048738676179722587cb0e43de22 = $(`<div id="html_9c09048738676179722587cb0e43de22" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 53<br>                     <b>Tipo:</b> instalación completa<br>                     <b>Tiempo estimado:</b> 180<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_d7be11f826d03049bf7e34d64406ca4a.setContent(html_9c09048738676179722587cb0e43de22);
+            
+        
+
+        circle_marker_aa59bedd6e3db012a19fcf7b220e16bb.bindPopup(popup_d7be11f826d03049bf7e34d64406ca4a)
+        ;
+
+        
+    
+    
+            var circle_marker_c35687f5481aa1398709e5679af0ebdf = L.circleMarker(
+                [21.088920990854547, -101.71988677841091],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_832a9bb387772c6e0ee430d00f8df3c5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34ffe8a4772538157f87ef7f8cf8c249 = $(`<div id="html_34ffe8a4772538157f87ef7f8cf8c249" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 54<br>                     <b>Tipo:</b> instalación avanzada<br>                     <b>Tiempo estimado:</b> 150<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_832a9bb387772c6e0ee430d00f8df3c5.setContent(html_34ffe8a4772538157f87ef7f8cf8c249);
+            
+        
+
+        circle_marker_c35687f5481aa1398709e5679af0ebdf.bindPopup(popup_832a9bb387772c6e0ee430d00f8df3c5)
+        ;
+
+        
+    
+    
+            var circle_marker_ef4baa55c57d74543b8db41f648d9180 = L.circleMarker(
+                [21.131442738102614, -101.71947515641457],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_3f6c251e315303255ace789807c12de3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_73dc50224edeed6750bf68d59e99c238 = $(`<div id="html_73dc50224edeed6750bf68d59e99c238" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 55<br>                     <b>Tipo:</b> revisión para instalar<br>                     <b>Tiempo estimado:</b> 20<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_3f6c251e315303255ace789807c12de3.setContent(html_73dc50224edeed6750bf68d59e99c238);
+            
+        
+
+        circle_marker_ef4baa55c57d74543b8db41f648d9180.bindPopup(popup_3f6c251e315303255ace789807c12de3)
+        ;
+
+        
+    
+    
+            var circle_marker_075579ea6357e410c16e23e5a7ef58df = L.circleMarker(
+                [21.087578723337728, -101.60024313153465],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_75ec2f472c9512437c6880a66e01841d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8b539d227541f553a94483f27afcdc06 = $(`<div id="html_8b539d227541f553a94483f27afcdc06" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 56<br>                     <b>Tipo:</b> entrega de mercancía mayor<br>                     <b>Tiempo estimado:</b> 30<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_75ec2f472c9512437c6880a66e01841d.setContent(html_8b539d227541f553a94483f27afcdc06);
+            
+        
+
+        circle_marker_075579ea6357e410c16e23e5a7ef58df.bindPopup(popup_75ec2f472c9512437c6880a66e01841d)
+        ;
+
+        
+    
+    
+            var circle_marker_9ad02e0b36347029983a381469188361 = L.circleMarker(
+                [21.048377461601753, -101.65332463324805],
+                {"bubblingMouseEvents": true, "color": "#b2f295", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2f295", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_38016ba8482f14a38a8a4f8beb400a3b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34efc9c6465636bb6b6fdf74f241d7b6 = $(`<div id="html_34efc9c6465636bb6b6fdf74f241d7b6" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 57<br>                     <b>Tipo:</b> mantenimiento sencillo<br>                     <b>Tiempo estimado:</b> 15<br>                     <b>Color (Día):</b> (0.7, 0.9510565162951536, 0.5877852522924731, 1.0)                     </div>`)[0];
+                popup_38016ba8482f14a38a8a4f8beb400a3b.setContent(html_34efc9c6465636bb6b6fdf74f241d7b6);
+            
+        
+
+        circle_marker_9ad02e0b36347029983a381469188361.bindPopup(popup_38016ba8482f14a38a8a4f8beb400a3b)
+        ;
+
+        
+    
+    
+            var circle_marker_163b5d5feb34ca90de0d2d37964cbba9 = L.circleMarker(
+                [21.1799473131888, -101.69498145728157],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_6e905fe8a8f4274beb1586071c9565c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92b850d7f8c90f2aa216aec67de2735c = $(`<div id="html_92b850d7f8c90f2aa216aec67de2735c" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 58<br>                     <b>Tipo:</b> mantenimiento completo<br>                     <b>Tiempo estimado:</b> 60<br>                     <b>Color (Día):</b> (1.0, 1.2246467991473532e-16, 6.123233995736766e-17, 1.0)                     </div>`)[0];
+                popup_6e905fe8a8f4274beb1586071c9565c4.setContent(html_92b850d7f8c90f2aa216aec67de2735c);
+            
+        
+
+        circle_marker_163b5d5feb34ca90de0d2d37964cbba9.bindPopup(popup_6e905fe8a8f4274beb1586071c9565c4)
+        ;
+
+        
+    
+    
+            var circle_marker_43803ce979b212364465c408b7ab5c41 = L.circleMarker(
+                [21.1263572021278, -101.74087979684309],
+                {"bubblingMouseEvents": true, "color": "#7f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_53e1bc54a3f2e1d5e47c26b3cf34ca83 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6708b1584695c8ca7d9e74c3ad0e3fc = $(`<div id="html_f6708b1584695c8ca7d9e74c3ad0e3fc" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 59<br>                     <b>Tipo:</b> mantenimiento completo<br>                     <b>Tiempo estimado:</b> 60<br>                     <b>Color (Día):</b> (0.5, 0.0, 1.0, 1.0)                     </div>`)[0];
+                popup_53e1bc54a3f2e1d5e47c26b3cf34ca83.setContent(html_f6708b1584695c8ca7d9e74c3ad0e3fc);
+            
+        
+
+        circle_marker_43803ce979b212364465c408b7ab5c41.bindPopup(popup_53e1bc54a3f2e1d5e47c26b3cf34ca83)
+        ;
+
+        
+    
+    
+            var circle_marker_d0975e8207be093d121673710e2ba2a8 = L.circleMarker(
+                [21.076452958583047, -101.68106324949402],
+                {"bubblingMouseEvents": true, "color": "#1995f2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1995f2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1897e9db2d64a6a27b80862c6d0b058);
+        
+    
+        var popup_79d56ea9d21d04bba8af0d68a613f370 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0c5f3c2b577152bf362dc0409fedf3fe = $(`<div id="html_0c5f3c2b577152bf362dc0409fedf3fe" style="width: 100.0%; height: 100.0%;">                     <b>Servicio ID:</b> 60<br>                     <b>Tipo:</b> entrega de mercancía menor<br>                     <b>Tiempo estimado:</b> 10<br>                     <b>Color (Día):</b> (0.09999999999999998, 0.5877852522924731, 0.9510565162951535, 1.0)                     </div>`)[0];
+                popup_79d56ea9d21d04bba8af0d68a613f370.setContent(html_0c5f3c2b577152bf362dc0409fedf3fe);
+            
+        
+
+        circle_marker_d0975e8207be093d121673710e2ba2a8.bindPopup(popup_79d56ea9d21d04bba8af0d68a613f370)
+        ;
+
+        
+    
+</script>
+</html>
