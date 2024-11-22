@@ -1,4 +1,3 @@
-#
 import networkx as nx
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
@@ -421,7 +420,7 @@ class SubGrafo:
 # Extraemos la información de el archivo.json
 
 def loads_dataset(size):
-    ruta = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/Mates_IA/"
+    ruta = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/Mates_IA/proyecto_final/"
     match size:
         case "s":
             archino_nombre = "servicios_s.json"
