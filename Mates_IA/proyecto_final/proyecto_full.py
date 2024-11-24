@@ -174,6 +174,15 @@ class Grafo:
         print("Enlaces creados correctamente.")
 
 # ============================================= renderización visual =========================================================================
+    def vizualizar(self):
+        #self.matriz_de_adyacencia()
+        #self.visualizar_cluster()
+        #self.visualizar_grafo()
+        self.visualizar_cluster_interactivo()
+        self.visualizar_grafo_interactivo()
+    
+    
+    
     def matriz_de_adyacencia(self):
         sns.heatmap(self.matriz_de_distancias, cmap="coolwarm", annot=False)
         plt.title("Matriz de distancias")
@@ -417,6 +426,9 @@ class SubGrafo:
 
 
 # ======================================================================================================================
+# ========================================== Iniciamos con la configuración ============================================
+# ======================================================================================================================
+
 # Extraemos la información de el archivo.json
 
 def loads_dataset(size):
@@ -439,7 +451,7 @@ def loads_dataset(size):
         with open(full_path, "r") as archivo:
             servicios = json.load(archivo)
             print("Archivo cargado correctamente.")
-            print(servicios)
+            #print(servicios)
     except FileNotFoundError:
         print("El archivo no existe.")
         servicios = []
@@ -453,21 +465,11 @@ def loads_dataset(size):
 
 # Crear una instancia del grafo con los servicios cargados
 semana_chamba = Grafo()
-
 # Cargar los datos de los servicios en el grafo | Para el tamaño pon "s", "m", "g" o "xl"
-semana_chamba.load_data(loads_dataset("s"))
+semana_chamba.load_data(loads_dataset("n"))
+# Visualizar el grafo y los clústeres
+semana_chamba.vizualizar()
 
-# # Visualizar los clústeres de servicios en una gráfica estática
-# semana_chamba.visualizar_cluster()
+print("RENDERIZACIÓN TERMINADA PUEDES VER LOS RESULTADOS EN LOS ARCHIVOS HTML")
 
-# # Visualizar el grafo de servicios en una gráfica estática
-# semana_chamba.visualizar_grafo()
-
-# # Visualizar los clústeres de servicios en una gráfica interactiva
-# semana_chamba.visualizar_cluster_interactivo()
-
-# # Visualizar el grafo de servicios en una gráfica interactiva
-# semana_chamba.visualizar_grafo_interactivo()
-
-
-# semana_chamba.mapa_con_rutas_optimas(gmaps)
+semana_chamba.mapa_con_rutas_optimas(gmaps)
