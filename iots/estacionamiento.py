@@ -1,76 +1,117 @@
-# -*- coding: utf-8 -*-
-"""Compara una imagen con una referencia @author: Myriam"""
+import cv2
+import os
+import json
+import sys
+import numpy as np
+from skimage.metrics import structural_similarity as ssim
 
-import cv2  # Librería OpenCV para procesar imágenes
-import sys  # sys maneja errores
+def cargar_imagen(ruta, escala_grises=True):
+    """Carga una imagen desde una ruta específica."""
+    flag = cv2.IMREAD_GRAYSCALE if escala_grises else cv2.IMREAD_COLOR
+    imagen = cv2.imread(ruta, flag)
+    if imagen is None:
+        raise ValueError(f"No se pudo cargar la imagen desde {ruta}")
+    return imagen
 
-# Ruta de las imágenes que va a comparar, es necesario que las imágenes tengan
-# el mismo tamaño y la misma perspectiva
+def calcular_similitud(roi1, roi2):
+    """Calcula el índice de similitud estructural (SSIM) entre dos ROIs."""
+    return ssim(roi1, roi2, full=True)
+
+def crear_mascara(imagen_shape, vertices):
+    """Crea una máscara binaria para un polígono definido por vértices."""
+    mascara = np.zeros(imagen_shape[:2], dtype=np.uint8)
+    # Mostrar imagen al usuario para verla
+    cv2.imshow("Setup de cajones", mascara)
+    cv2.fillPoly(mascara, [np.array(vertices, np.int32)], 255)
+    return mascara
+
+def aplicar_mascara(imagen, mascara):
+    """Aplica una máscara binaria a una imagen."""
+    return cv2.bitwise_and(imagen, imagen, mask=mascara)
+
+def guardar_coordenadas(ruta_archivo, coordenadas):
+    """Guarda las coordenadas de los cajones en un archivo JSON."""
+    with open(ruta_archivo, "w") as archivo:
+        json.dump(coordenadas, archivo, indent=4)
+    print(f"Coordenadas guardadas en {ruta_archivo}")
+
+def cargar_coordenadas(ruta_archivo):
+    """Carga las coordenadas de los cajones desde un archivo JSON."""
+    if os.path.exists(ruta_archivo):
+        with open(ruta_archivo, "r") as archivo:
+            return json.load(archivo)
+    else:
+        print("No se encontraron coordenadas guardadas. Realiza el setup inicial.")
+        return []
+
+# Ruta del archivo para guardar coordenadas
+archivo_coordenadas = "lugares_estacionamiento.json"
+
+# Cargar las coordenadas guardadas o realizar setup inicial
+lugares_estacionamiento = cargar_coordenadas(archivo_coordenadas)
+
+if not lugares_estacionamiento:  # Si no hay coordenadas, ejecutar setup inicial
+    print("No se encontraron coordenadas. Realiza el setup inicial.")
+    imagen = cv2.imread(
+        "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/original.jpg"
+    )
+    vertices_cajon = []
+
+    def seleccionar_cajones(event, x, y, flags, param):
+        global vertices_cajon, lugares_estacionamiento, imagen
+        if event == cv2.EVENT_LBUTTONDOWN:
+            vertices_cajon.append((x, y))
+            cv2.circle(imagen, (x, y), 5, (0, 255, 0), -1)
+            cv2.imshow("Setup de cajones", imagen)
+            if len(vertices_cajon) == 4:  # Completar cajón
+                lugares_estacionamiento.append(vertices_cajon.copy())
+                cv2.polylines(
+                    imagen,
+                    [np.array(vertices_cajon, np.int32)],
+                    isClosed=True,
+                    color=(255, 0, 0),
+                    thickness=2,
+                )
+                vertices_cajon = []  # Reiniciar para el siguiente cajón
+
+    cv2.imshow("Setup de cajones", imagen)
+    cv2.setMouseCallback("Setup de cajones", seleccionar_cajones)
+    cv2.waitKey(0)
+    guardar_coordenadas(archivo_coordenadas, lugares_estacionamiento)
+    cv2.destroyAllWindows()
+
+# Imágenes para probar
 foto_referencia = (
-    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/imagen.jpg"
+    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/vacio.jpg"
 )
 foto_actual = (
-    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/imagen2.jpg"
+    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/seiscohes.jpg"
 )
 
-# Delimita la Region de Interés (ROI) dentro de las imágenes
-# Coordenadas de la caja, el formato es (x, y, ancho, alto)
-# donde x,y son las coordenadas de la esquina superior izquierda de la caja
-# todos estos numeros son los pixeles
-caja = (0, 0, 320, 240)  # Ajusta según las coordenadas del cajón
+try:
+    # Cargar imágenes
+    imagen_referencia = cargar_imagen(foto_referencia)
+    imagen_actual = cargar_imagen(foto_actual)
 
-# Cargar imágenes y cambiar a escala de grises para facilitar el análisis
-# También se puede hacer en color cv2.IMREAD_COLOR pero lo hace más lento
-imagen_referencia = cv2.imread(foto_referencia, cv2.IMREAD_GRAYSCALE)
-imagen_actual = cv2.imread(foto_actual, cv2.IMREAD_GRAYSCALE)
+    # Evaluar cada lugar de estacionamiento
+    for i, vertices in enumerate(lugares_estacionamiento, start=1):
+        mascara = crear_mascara(imagen_referencia.shape, vertices)
+        roi_referencia = aplicar_mascara(imagen_referencia, mascara)
+        roi_actual = aplicar_mascara(imagen_actual, mascara)
 
-# Si las impagenes no se cargaron correctamente, imprime un error y termina
-if imagen_referencia is None or imagen_actual is None:
-    print("Error: No se cargaron las imágenes")
+        # Comparar las regiones (ROI)
+        similaridad, _ = calcular_similitud(roi_referencia, roi_actual)
+        estado = "ocupado" if similaridad < 0.8 else "vacío"
+        print(f"Lugar {i}: Similitud = {similaridad:.2f}, Estado = {estado}")
+
+        # Dibujar los polígonos en la imagen actual
+        color = (0, 255, 0) if estado == "vacío" else (0, 0, 255)
+        cv2.polylines(imagen_actual,[np.array(vertices, np.int32)],isClosed=True,color=color,thickness=2,)
+
+    cv2.imshow("Estado del estacionamiento", imagen_actual)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+except Exception as e:
+    print(f"Error: {e}")
     sys.exit()
-
-# Extraer la ROI (Región de interés) para la caja en ambas imágenes
-x, y, w, h = caja
-roi_referencia = imagen_referencia[y : y + h, x : x + w]
-roi_actual = imagen_actual[y : y + h, x : x + w]
-
-# Calcular la diferencia entre las dos imágenes y la convierte en una imagen
-# binaria
-diferencia = cv2.absdiff(roi_referencia, roi_actual)
-
-# Aplicar un umbral para resaltar las diferencias, pixeles mayores a 30 se
-# vuelven blancos (255), el resto, se vuelven negros
-_, diferencia_binaria = cv2.threshold(diferencia, 30, 255, cv2.THRESH_BINARY)
-
-# Contar los píxeles blncos (diferentes) en la imagen
-diferencia_total = cv2.countNonZero(diferencia_binaria)
-
-# Definir un umbral para decidir si el pato se encuentra o no dentro de la caja
-# este numero es el maximo de pixeles diferentes que pueden presentarse entre ambas imágenes
-umbral_diferencia = 300
-
-# Determinar el estado del pato
-estado = (
-    "hay cambio"
-    if diferencia_total > umbral_diferencia
-    else "no hay cambio en las fotos"
-)
-print(f"{estado}")
-
-# Mostrar las imágenes y resultados
-cv2.imshow("Referencia (Caja vacia)", roi_referencia)
-cv2.imshow("Actual (imagen a evaluar)", roi_actual)
-cv2.imshow("Diferencia", diferencia_binaria)
-
-# Redimensionar las ventanas
-cv2.namedWindow("Referencia (Caja vacia)", cv2.WINDOW_NORMAL)
-cv2.namedWindow("Actual (imagen a evaluar)", cv2.WINDOW_NORMAL)
-cv2.namedWindow("Diferencia", cv2.WINDOW_NORMAL)
-
-cv2.resizeWindow("Referencia (Caja vacia)", 600, 400)
-cv2.resizeWindow("Actual (imagen a evaluar)", 600, 400)
-cv2.resizeWindow("Diferencia", 600, 400)
-
-# Esperar a que el usuario cierre las ventanas o presione una tecla para terminar el programa
-cv2.waitKey(0)
-cv2.destroyAllWindows()
