@@ -25,9 +25,17 @@ tipos_servicio = {
     "revisión para instalar": 20
 }
 
+colores = [
+    "#a567bf",  # Morado (Lunes)
+    "#ec7063",  # Rojo pastel (Martes)
+    "#138d75",  # Verde oscuro (Miércoles)
+    "#2e86c1",  # Azul oceano (Jueves)
+    "#515a5a",  # Gris (Viernes)
+    "#f39c12",  # Naranja (Sábado)
+]
+
 # Función para generar una ubicación aleatoria dentro de un radio en kilómetros
 def generar_ubicacion_aleatoria(centro_lat, centro_lon, radio_km):
-    # Conversión de kilómetros a grados
     radio_grados = radio_km / 111  # Aproximadamente 111 km por grado
     u = random.random()
     v = random.random()
@@ -39,32 +47,38 @@ def generar_ubicacion_aleatoria(centro_lat, centro_lon, radio_km):
     nueva_lon = centro_lon + x / np.cos(np.radians(centro_lat))
     return nueva_lat, nueva_lon
 
+# Función para calcular el número de flotillas dinámicamente
+def calcular_flotillas(cantidad_servicios, base=30, flotillas_base=4):
+    return max(1, (cantidad_servicios * flotillas_base) // base)
+
 # Función para generar un conjunto de datos de servicios
-def generar_servicios(cantidad):
+def generar_servicios(cantidad, flotillas):
     servicios = []
     for i in range(cantidad):
         tipo = random.choice(list(tipos_servicio.keys()))
         tiempo = tipos_servicio[tipo]
         lat, lon = generar_ubicacion_aleatoria(centro_lat, centro_lon, radio_km)
+        flotilla_asignada = (i % flotillas) + 1  # Asignación balanceada entre flotillas
         servicio = {
             "id": i + 1,
             "tipo": tipo,
             "tiempo": tiempo,
             "ubicacion": [lat, lon],
-            "color": None,
-            "bloqueado": False,
-            "flotilla": None
+            "color": random.choice(colores),
+            "bloqueado": random.choice([True, False]),
+            "flotilla": flotilla_asignada
         }
         servicios.append(servicio)
     return servicios
 
 # Generar conjuntos de datos
-tamaños = [60, 120, 240, 480]
+cantidad_servicios = [30, 60, 240, 2880]
 prefijos = ["_s", "_m", "_g", "_xl"]
 
-for tamaño, prefijo in zip(tamaños, prefijos):
-    servicios = generar_servicios(tamaño)
+for tam, prefijo in zip(cantidad_servicios, prefijos):
+    cantidad_flotillas = calcular_flotillas(tam)
+    servicios = generar_servicios(tam, cantidad_flotillas)
     nombre_archivo = f"servicios{prefijo}.json"
-    with open(nombre_archivo, 'w') as archivo:
-        json.dump(servicios, archivo, indent=4)
-    print(f"Archivo '{nombre_archivo}' generado con {tamaño} servicios.")
+    with open(nombre_archivo, 'w', encoding='utf-8') as archivo:
+        json.dump(servicios, archivo, indent=4, ensure_ascii=False)
+    print(f"Archivo '{nombre_archivo}' generado con {tam} servicios y {cantidad_flotillas} flotillas.")
