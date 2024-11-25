@@ -13,6 +13,8 @@ from keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
+import tensorflow as tf
+from imblearn.over_sampling import RandomOverSampler
 
 
 
@@ -96,6 +98,10 @@ tokenizer = Tokenizer(oov_token=True)
 # Entrenamos el tokenizador usando los textos
 tokenizer.fit_on_texts(X_train)
 
+# Definir vocab_size
+vocab_size = len(tokenizer.word_index) + 1
+max_len = 50  # O el valor que estés usando
+
 # Convertimos los textos a secuencias numericas
 X_train = tokenizer.texts_to_sequences(X_train)
 X_test = tokenizer.texts_to_sequences(X_test)
@@ -116,23 +122,8 @@ MAX_LEN = 50  # Ajustar según el análisis de longitudes
 X_train = pad_sequences(X_train, maxlen=MAX_LEN, padding="post", truncating="post")
 X_test = pad_sequences(X_test, maxlen=MAX_LEN, padding="post", truncating="post")
 
-print(f"Tamaño del vocabulario: {len(tokenizer.word_index) + 1}")
-print("Ejemplo de secuencia tokenizada de entrenamiento:", X_train[0])
-
-print(f"Forma de X_train: {X_train.shape}")
-print(f"Forma de X_test: {X_test.shape}")
-print(f"Forma de y_train: {y_train.shape}")
-print(f"Forma de y_test: {y_test.shape}")
 
 
-# ME QUEDE AQUÍ ¿QUÉ SIGUE?
-
-"""## CNN
-
-Una vez que ya hemos procesado el texto, podemos definir el modelo.
-
-
-"""
 
 
 # Parámetros
@@ -140,36 +131,47 @@ EMBEDDING_SIZE = 50  # Tamaño de los vectores de las palabras
 NUM_WORDS = len(tokenizer.word_index) + 1  # Tamaño del vocabulario
 MAX_LEN = 50  # Longitud máxima de las secuencias (ya definida)
 
-# Modelo mejorado
+# 1. Ajustar los pesos de clase más agresivamente
+class_weights = {
+    0: 4.0,  # Increase this value to give more weight to class 0
+    1: 1.0   # Keep this value for class 1
+}
+
+# 2. Modificar la arquitectura para mejor manejo de clases desbalanceadas
 model = Sequential([
-    Embedding(NUM_WORDS, 100, input_length=MAX_LEN),
-    Conv1D(64, 5, activation='relu', kernel_regularizer=l2(0.01)),
+    Embedding(vocab_size, 128, input_length=max_len),
+    Conv1D(64, 3, activation='relu', kernel_regularizer=l2(0.01)),
     MaxPooling1D(2),
-    Dropout(0.2),
-    Conv1D(128, 5, activation='relu', kernel_regularizer=l2(0.01)),
-    MaxPooling1D(2),
-    Dropout(0.2),
-    Bidirectional(LSTM(64, return_sequences=True)),
-    GlobalMaxPooling1D(),
-    Dense(64, activation='relu', kernel_regularizer=l2(0.01)),
     Dropout(0.3),
+    Conv1D(128, 3, activation='relu', kernel_regularizer=l2(0.01)),
+    MaxPooling1D(2),
+    Dropout(0.3),
+    Bidirectional(LSTM(64)),
+    Dense(64, activation='relu', kernel_regularizer=l2(0.01)),
+    Dropout(0.4),
     Dense(1, activation='sigmoid')
 ])
 
-# Compilar con learning rate ajustado
-optimizer = Adam(learning_rate=0.001)
-model.compile(loss='binary_crossentropy', 
-              optimizer=optimizer,
-              metrics=['accuracy'])
-
-# Calcular pesos de clase
-class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
-class_weights = dict(enumerate(class_weights))
+# 3. Ajustar el compilador
+optimizer = Adam(learning_rate=0.0005)
+model.compile(
+    loss='binary_crossentropy',
+    optimizer=optimizer,
+    metrics=['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
+)
 
 # Dividir X_train y y_train en entrenamiento y validación
 X_train, X_val, y_train, y_val = train_test_split(
     X_train, y_train, test_size=0.2, random_state=42
 )
+
+# Combine your features and labels
+X_combined = X_train
+y_combined = y_train
+
+# Apply RandomOverSampler
+ros = RandomOverSampler(random_state=42)
+X_resampled, y_resampled = ros.fit_resample(X_combined, y_combined)
 
 # Early stopping
 early_stopping = EarlyStopping(
@@ -180,20 +182,29 @@ early_stopping = EarlyStopping(
 
 # Entrenamiento
 history = model.fit(
-    X_train,
-    y_train,
+    X_resampled,
+    y_resampled,
     epochs=15,
     batch_size=32,
     validation_data=(X_val, y_val),
-    class_weight=class_weights,
     callbacks=[early_stopping]
 )
 
 # Evaluar al modelo
-loss, accuracy = model.evaluate(X_test, y_test, batch_size=16)
-print(f"Loss: {loss}, Accuracy: {accuracy}")
+loss, accuracy, precision, recall = model.evaluate(X_test, y_test, batch_size=16) 
+print(f"Loss: {loss}, Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}")
+
+results = model.evaluate(X_test, y_test, batch_size=16)
+print(f"Loss: {results[0]}, Accuracy: {results[1]}")
 
 
+
+# Get predicted probabilities
+y_pred_probs = model.predict(X_test)
+
+# Adjust the threshold
+threshold = 0.3  # You can experiment with this value
+y_pred = (y_pred_probs > threshold).astype("int32")
 
 # Generar predicciones
 y_pred = (model.predict(X_test) > 0.5).astype("int32")
@@ -227,7 +238,27 @@ plt.title("Loss vs Epochs")
 plt.show()
 
 # Evaluación del modelo en test
-loss, accuracy = model.evaluate(X_test, y_test, batch_size=16)
+test_results = model.evaluate(X_test, y_test, batch_size=16)
+loss = test_results[0]
+accuracy = test_results[1]
+precision = test_results[2]
+recall = test_results[3]
+
+
+print(f"Tamaño del vocabulario: {len(tokenizer.word_index) + 1}")
+print("Ejemplo de secuencia tokenizada de entrenamiento:", X_train[0])
+
+print(f"Forma de X_train: {X_train.shape}")
+print(f"Forma de X_test: {X_test.shape}")
+print(f"Forma de y_train: {y_train.shape}")
+print(f"Forma de y_test: {y_test.shape}")
+
+
+print("\n*** Resultados del Modelo ***")
+print(f"Loss en Test: {loss:.4f}")
+print(f"Accuracy en Test: {accuracy:.4f}")
+print(f"Precision en Test: {precision:.4f}")
+print(f"Recall en Test: {recall:.4f}\n")
 
 # Predicciones del modelo
 y_pred = (model.predict(X_test) > 0.5).astype("int32")
