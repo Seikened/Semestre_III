@@ -18,18 +18,20 @@ foto_actual = tres
 ancho = 700
 alto = 300
 lugares_estacionamiento = [
-    # (x, y, ancho, alto)
     (24, 352, ancho, alto),  # Cajón 1
     (39, 876, ancho, alto),  # Cajón 2
     (34, 1388, ancho, alto),  # Cajón 3
-    
     (1047, 375, ancho, alto),  # Cajón 4
     (1030, 896, ancho, alto),  # Cajón 5
     (1041, 1376, ancho, alto)  # Cajón 6
 ]
 
+# Estados esperados (1 = Ocupado, 0 = Disponible)
+estados_esperados = [1, 0, 1, 1, 0, 0]
+
 # Parámetros ajustables
 umbral_diferencia_pixeles = 60  # Diferencia mínima en pixeles para ser significativa
+umbral_porcentaje_ocupado = 18  # Porcentaje mínimo para considerar un lugar como ocupado
 
 # Cargar imágenes
 imagen_referencia = cv2.imread(foto_referencia, cv2.IMREAD_GRAYSCALE)
@@ -48,6 +50,9 @@ if imagen_referencia.shape != imagen_actual.shape:
 # Mostrar información inicial
 print(f"[INFO] Dimensiones de la imagen: {imagen_referencia.shape}")
 
+# Variables para la validación
+predicciones = []
+
 # Evaluar cada región de interés
 for i, (x, y, w, h) in enumerate(lugares_estacionamiento, start=1):
     print(f"\n[INFO] Evaluando lugar {i} en ROI: x={x}, y={y}, ancho={w}, alto={h}")
@@ -65,28 +70,41 @@ for i, (x, y, w, h) in enumerate(lugares_estacionamiento, start=1):
     # Calcular áreas de píxeles blancos y negros
     pixeles_blancos = cv2.countNonZero(diferencia_binaria)
     area_total = w * h
-    pixeles_negros = area_total - pixeles_blancos
+    porcentaje_pixeles_blancos = (pixeles_blancos / area_total) * 100
 
-    # Mostrar áreas en consola
+    # Determinar estado del lugar
+    estado_actual = 1 if porcentaje_pixeles_blancos > umbral_porcentaje_ocupado else 0
+    predicciones.append(estado_actual)
+
+    # Mostrar resultados en consola
+    estado_texto = "Ocupado🔴" if estado_actual == 1 else "Disponible🟢"
     print(f"[RESULTADO] Lugar {i}:")
-    print(f"  Área total: {area_total} píxeles")
-    print(f"  Píxeles blancos: {pixeles_blancos} ({(pixeles_blancos / area_total) * 100:.2f}%)")
-    print(f"  Píxeles negros: {pixeles_negros} ({(pixeles_negros / area_total) * 100:.2f}%)")
+    print(f"  Píxeles blancos: {pixeles_blancos} ({porcentaje_pixeles_blancos:.2f}%)")
+    print(f"  Estado: {estado_texto}")
 
-    # Dibujar el rectángulo y las etiquetas en la imagen
-    etiqueta_blancos = f"Blancos: {pixeles_blancos}"
-    etiqueta_negros = f"Negros: {pixeles_negros}"
+    # Dibujar resultados en la imagen
+    color = (0, 0, 255) if estado_actual == 1 else (0, 255, 0)
+    cv2.rectangle(imagen_actual_color, (x, y), (x+w, y+h), color, 2)
+    cv2.putText(imagen_actual_color, f"Lugar {i}: {estado_texto}",
+                (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
-    cv2.rectangle(imagen_actual_color, (x, y), (x+w, y+h), (0, 255, 0), 2)  # Rectángulo verde
-    cv2.putText(imagen_actual_color, etiqueta_blancos, (x, y - 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-    cv2.putText(imagen_actual_color, etiqueta_negros, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-
-    # Mostrar la diferencia binaria para cada ROI (opcional)
-    cv2.imshow(f"Lugar {i} - Diferencia Binaria", diferencia_binaria)
-
-# Mostrar la imagen con los resultados
+# Mostrar la imagen final
 cv2.imshow("Estado del Estacionamiento", imagen_actual_color)
 
-# Esperar que el usuario cierre las ventanas para finalizar
+# Validar predicciones
+print("\n[VALIDACIÓN]")
+correctas = 0
+for i, (pred, esperado) in enumerate(zip(predicciones, estados_esperados), start=1):
+    if pred == esperado:
+        print(f"Lugar {i}: Correcto ✅ (Esperado: {esperado}, Predicho: {pred})")
+        correctas += 1
+    else:
+        print(f"Lugar {i}: Incorrecto ❌ (Esperado: {esperado}, Predicho: {pred})")
+
+# Calcular métricas de validación
+total = len(estados_esperados)
+precision = correctas / total * 100
+print(f"\n[RESULTADO FINAL] Precisión: {precision:.2f}% ({correctas}/{total} lugares correctos)")
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
