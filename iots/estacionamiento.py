@@ -12,6 +12,7 @@ def cargar_imagen(ruta, escala_grises=False):
     imagen = cv2.imread(ruta, flag)
     if imagen is None:
         raise ValueError(f"No se pudo cargar la imagen desde {ruta}")
+    print(f"[INFO] Imagen cargada desde {ruta}, dimensiones: {imagen.shape}")
     return imagen
 
 
@@ -19,8 +20,8 @@ def preprocesar_imagen(imagen):
     """Aplica preprocesamiento a la imagen para resaltar diferencias."""
     gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
     desenfoque = cv2.GaussianBlur(gris, (5, 5), 0)
-    edges = cv2.Canny(desenfoque, 50, 150)  # Detectar bordes
-    return edges
+    print(f"[INFO] Imagen preprocesada, dimensiones: {gris.shape}, promedio de intensidad: {np.mean(gris):.2f}")
+    return desenfoque
 
 
 def calcular_diferencia_pixeles(roi1, roi2, umbral_pixeles=30):
@@ -28,6 +29,7 @@ def calcular_diferencia_pixeles(roi1, roi2, umbral_pixeles=30):
     diff = cv2.absdiff(roi1, roi2)
     _, diff_bin = cv2.threshold(diff, umbral_pixeles, 255, cv2.THRESH_BINARY)
     porcentaje_diferencia = np.sum(diff_bin > 0) / np.prod(diff_bin.shape)
+    print(f"[DEBUG] Diferencia de píxeles calculada: {porcentaje_diferencia:.2%}")
     return porcentaje_diferencia
 
 
@@ -38,16 +40,16 @@ def crear_mascara(imagen_shape, vertices):
     mascara = np.zeros(imagen_shape[:2], dtype=np.uint8)
     vertices = np.array(vertices, np.int32)
     cv2.fillPoly(mascara, [vertices], 255)
+    porcentaje_cubierto = np.sum(mascara > 0) / np.prod(mascara.shape)
+    print(f"[INFO] Máscara creada, porcentaje de área cubierta: {porcentaje_cubierto:.2%}")
     return mascara
 
 
 def aplicar_mascara(imagen, mascara):
     """Aplica una máscara binaria a una imagen."""
-    if mascara.dtype != np.uint8:
-        raise ValueError("La máscara debe ser de tipo uint8.")
-    if mascara.shape != imagen.shape[:2]:
-        raise ValueError("La máscara no tiene el mismo tamaño que la imagen.")
-    return cv2.bitwise_and(imagen, imagen, mask=mascara)
+    resultado = cv2.bitwise_and(imagen, imagen, mask=mascara)
+    print(f"[INFO] Máscara aplicada, dimensiones del resultado: {resultado.shape}")
+    return resultado
 
 
 def guardar_coordenadas(ruta_archivo, coordenadas):
@@ -75,12 +77,9 @@ lugares_estacionamiento = cargar_coordenadas(archivo_coordenadas)
 
 if not lugares_estacionamiento:  # Si no hay coordenadas, ejecutar setup inicial
     print("No se encontraron coordenadas. Realiza el setup inicial.")
-    imagen = cv2.imread(
+    imagen = cargar_imagen(
         "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/vacio_normalized.jpeg"
     )
-    if imagen is None:
-        raise ValueError("No se pudo cargar la imagen base para el setup inicial. Verifica la ruta y el archivo.")
-
     vertices_cajon = []
 
     def seleccionar_cajones(event, x, y, flags, param):
@@ -141,7 +140,7 @@ try:
         # Comparar las regiones (ROI)
         porcentaje_diferencia = calcular_diferencia_pixeles(roi_referencia, roi_actual)
         estado = "ocupado" if porcentaje_diferencia > 0.05 else "vacio"
-        print(f"Lugar {i}: Diferencia = {porcentaje_diferencia:.2%}, Estado = {estado}")
+        print(f"[RESULTADO] Lugar {i}: Diferencia = {porcentaje_diferencia:.2%}, Estado = {estado}")
 
         # Dibujar los polígonos en la imagen actual
         color = (0, 255, 0) if estado == "vacio" else (0, 0, 255)
