@@ -1,115 +1,145 @@
 import cv2
 import sys
 import numpy as np
+import os
+import time
+import urllib.request
 
+os.system("clear")
 # Rutas de imágenes
-url_base = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/"
-vacio = url_base + "vacio_normalized.jpeg"  # Imagen de referencia
-tres = url_base + "tres_normalized.jpeg"    # Imagen a analizar
-cinco = url_base + "cinco_normalized.jpeg"  # Imagen a analizar
-seis = url_base + "seis_normalized.jpeg"    # Imagen a analizar
+IMG_PATH = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/"
+IMG_REF = os.path.join(IMG_PATH, "vacio_normalized.jpeg")
+IMAGES_TEST = [
+    os.path.join(IMG_PATH, "tres_normalized.jpeg"),
+    os.path.join(IMG_PATH, "cinco_normalized.jpeg"),
+    os.path.join(IMG_PATH, "seis_normalized.jpeg")
+]
 
-# Coordenadas de las ROIs (modifica según tus cajones)
-ancho = 700
-alto = 300
-lugares_estacionamiento = [
-    (24, 352, ancho, alto),  # Cajón 1
-    (39, 876, ancho, alto),  # Cajón 2
-    (34, 1388, ancho, alto),  # Cajón 3
-    (1047, 375, ancho, alto),  # Cajón 4
-    (1030, 896, ancho, alto),  # Cajón 5
-    (1041, 1376, ancho, alto)  # Cajón 6
+# Configuración ESP32-CAM
+ESP32_URL = "http://172.20.10.2/capture"
+
+# Coordenadas de las ROIs
+ANCHO = 700
+ALTO = 300
+LUGARES_ESTACIONAMIENTO = [
+    (24, 352, ANCHO, ALTO),
+    (39, 876, ANCHO, ALTO),
+    (34, 1388, ANCHO, ALTO),
+    (1047, 375, ANCHO, ALTO),
+    (1030, 896, ANCHO, ALTO),
+    (1041, 1376, ANCHO, ALTO),
 ]
 
 # Parámetros ajustables
-umbral_diferencia_pixeles = 60  # Sensibilidad al cambio en los píxeles
-umbral_porcentaje_ocupado = 18  # Porcentaje mínimo para considerar un lugar como ocupado
+UMBRAL_PIXELES = 60
+UMBRAL_OCUPADO = 18
 
+def cargar_imagen_vacio():
+    """Verifica si la imagen de referencia existe, de lo contrario permite capturarla."""
+    if not os.path.exists(IMG_REF):
+        print("[INFO] No se encontró la imagen de referencia. Capturando ahora...")
+        capturar_imagen(IMG_REF)
+    return cv2.imread(IMG_REF, cv2.IMREAD_GRAYSCALE)
 
-def cargar_imagenes(ruta_referencia, ruta_actual):
-    """
-    Carga las imágenes de referencia y actual.
-    Convierte ambas a escala de grises para procesarlas.
-    """
-    img_ref = cv2.imread(ruta_referencia, cv2.IMREAD_GRAYSCALE)
-    img_actual = cv2.imread(ruta_actual, cv2.IMREAD_COLOR)  # Mantener color para visualización
-    img_actual_gray = cv2.cvtColor(img_actual, cv2.COLOR_BGR2GRAY)
+def capturar_imagen(destino):
+    """Captura una imagen desde la ESP32-CAM y la guarda en el destino."""
+    while True:
+        try:
+            print("[INFO] Posiciona la cámara. Presiona 'Espacio' para capturar.")
+            response = urllib.request.urlopen(ESP32_URL)
+            image_np = np.array(bytearray(response.read()), dtype=np.uint8)
+            image = cv2.imdecode(image_np, -1)
+            cv2.imshow("Capturar Imagen", image)
+            if cv2.waitKey(1) & 0xFF == ord(' '):  # Capturar con espacio
+                cv2.imwrite(destino, image)
+                print(f"[INFO] Imagen guardada como: {destino}")
+                break
+        except Exception as e:
+            print(f"[ERROR] No se pudo capturar la imagen: {e}")
+    cv2.destroyAllWindows()
 
-    if img_ref is None or img_actual_gray is None:
-        raise ValueError("No se pudieron cargar las imágenes.")
-    if img_ref.shape != img_actual_gray.shape:
-        raise ValueError("Las imágenes no tienen el mismo tamaño.")
+def cargar_imagen_actual(modo, img_path=None):
+    """Carga una imagen en función del modo seleccionado."""
+    if modo == "prueba" and img_path:
+        return cv2.imread(img_path, cv2.IMREAD_COLOR)
+    elif modo == "streaming":
+        try:
+            response = urllib.request.urlopen(ESP32_URL)
+            image_np = np.array(bytearray(response.read()), dtype=np.uint8)
+            return cv2.imdecode(image_np, cv2.IMREAD_COLOR)
+        except Exception as e:
+            print(f"[ERROR] No se pudo obtener la imagen actual: {e}")
+            return None
+    return None
 
-    return img_ref, img_actual, img_actual_gray
-
-
-def analizar_lugar(roi_referencia, roi_actual, umbral_pixeles, area_total):
-    """
-    Compara un ROI de la referencia y uno actual.
-    Devuelve el estado basado en el porcentaje de píxeles blancos.
-    """
-    # Calcular diferencia absoluta entre ROIs
-    diferencia = cv2.absdiff(roi_referencia, roi_actual)
-    _, diferencia_binaria = cv2.threshold(diferencia, umbral_pixeles, 255, cv2.THRESH_BINARY)
-
-    # Calcular porcentaje de píxeles blancos
+def analizar_lugar(roi_ref, roi_actual, area_total):
+    """Analiza un ROI y devuelve el porcentaje de píxeles blancos y la diferencia binaria."""
+    diferencia = cv2.absdiff(roi_ref, roi_actual)
+    _, diferencia_binaria = cv2.threshold(diferencia, UMBRAL_PIXELES, 255, cv2.THRESH_BINARY)
     pixeles_blancos = cv2.countNonZero(diferencia_binaria)
     porcentaje_blancos = (pixeles_blancos / area_total) * 100
-
     return porcentaje_blancos, diferencia_binaria
 
-
-def dibujar_resultados(imagen, x, y, w, h, estado, color, alpha=0.5):
-    """
-    Dibuja un rectángulo relleno semitransparente y un borde más grueso alrededor del lugar.
-    Muestra el estado del lugar (Ocupado o Disponible).
-    """
+def dibujar_resultados(imagen, x, y, w, h, estado, color):
+    """Dibuja resultados en la imagen: rectángulo y transparencia."""
     overlay = imagen.copy()
     cv2.rectangle(overlay, (x, y), (x+w, y+h), color, -1)  # Relleno
-    cv2.addWeighted(overlay, alpha, imagen, 1 - alpha, 0, imagen)  # Aplicar transparencia
-    cv2.rectangle(imagen, (x, y), (x+w, y+h), color, thickness=6)  # Contorno
+    cv2.addWeighted(overlay, 0.5, imagen, 0.5, 0, imagen)  # Transparencia
+    cv2.rectangle(imagen, (x, y), (x+w, y+h), color, 4)  # Contorno grueso
     return imagen
 
-
-def procesar_estacionamiento(imagen_referencia, imagen_actual, lugares, umbral_pixeles, umbral_ocupado):
-    """
-    Evalúa cada lugar de estacionamiento, calcula su estado y dibuja resultados.
-    """
-    for i, (x, y, w, h) in enumerate(lugares, start=1):
-        print(f"\n[INFO] Evaluando lugar {i} en ROI: x={x}, y={y}, ancho={w}, alto={h}")
-
-        # Extraer ROIs
-        roi_ref = imagen_referencia[y:y+h, x:x+w]
-        roi_actual = imagen_actual[y:y+h, x:x+w]
+def procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray):
+    """Procesa cada lugar de estacionamiento, calcula estado y dibuja resultados."""
+    for i, (x, y, w, h) in enumerate(LUGARES_ESTACIONAMIENTO, start=1):
+        roi_ref = img_ref[y:y+h, x:x+w]
+        roi_actual = img_actual_gray[y:y+h, x:x+w]
         area_total = w * h
 
-        # Analizar lugar
-        porcentaje_blancos, diferencia_binaria = analizar_lugar(roi_ref, roi_actual, umbral_pixeles, area_total)
-        estado = "Ocupado🔴" if porcentaje_blancos > umbral_ocupado else "Disponible🟢"
-
-        # Determinar color (verde suave para disponible, rojo para ocupado)
+        porcentaje_blancos, diferencia_binaria = analizar_lugar(roi_ref, roi_actual, area_total)
+        estado = "Ocupado🔴" if porcentaje_blancos > UMBRAL_OCUPADO else "Disponible🟢"
         color = (0, 0, 255) if "Ocupado" in estado else (102, 255, 102)
 
-        # Imprimir resultados en consola
-        print(f"[RESULTADO] Lugar {i}:")
-        print(f"  Píxeles blancos: {int(porcentaje_blancos * area_total / 100)} ({porcentaje_blancos:.2f}%)")
-        print(f"  Estado: {estado}")
+        # Imprimir resultados
+        print(f"[RESULTADO] Lugar {i}: {estado} ({porcentaje_blancos:.2f}%)")
 
-        # Dibujar resultados en la imagen
-        dibujar_resultados(imagen_actual_color, x, y, w, h, estado, color)
-        cv2.putText(imagen_actual_color, f"Lugar {i}: {estado}",
-                    (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
-        cv2.imshow(f"Lugar {i} - Diferencia Binaria", diferencia_binaria)  # Opcional
+        # Dibujar resultados
+        img_actual_color = dibujar_resultados(img_actual_color, x, y, w, h, estado, color)
+        cv2.imshow(f"Lugar {i} - Diferencia Binaria", diferencia_binaria)
 
+    return img_actual_color
 
-# Main Script
-try:
-    imagen_referencia, imagen_actual_color, imagen_actual_gray = cargar_imagenes(vacio, seis)
-    procesar_estacionamiento(imagen_referencia, imagen_actual_gray, lugares_estacionamiento,
-                             umbral_diferencia_pixeles, umbral_porcentaje_ocupado)
-    cv2.imshow("Estado del Estacionamiento", imagen_actual_color)
-    cv2.waitKey(0)
+# Main
+if __name__ == "__main__":
+    print("Selecciona el modo:")
+    print("1. Modo de prueba (imágenes locales)")
+    print("2. Streaming en vivo (ESP32-CAM)")
+    opcion = input("Elige una opción (1 o 2): ")
+
+    img_ref = cargar_imagen_vacio()
+
+    if opcion == "1":
+        print("[INFO] Modo de prueba seleccionado.")
+        for img_path in IMAGES_TEST:
+            img_actual_color = cargar_imagen_actual("prueba", img_path)
+            img_actual_gray = cv2.cvtColor(img_actual_color, cv2.COLOR_BGR2GRAY)
+            img_actual_color = procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray)
+            cv2.imshow("Estado del Estacionamiento", img_actual_color)
+            if cv2.waitKey(0) & 0xFF == ord('q'):
+                break
+    elif opcion == "2":
+        print("[INFO] Modo de streaming seleccionado.")
+        while True:
+            img_actual_color = cargar_imagen_actual("streaming")
+            if img_actual_color is None:
+                time.sleep(2)
+                continue
+            img_actual_gray = cv2.cvtColor(img_actual_color, cv2.COLOR_BGR2GRAY)
+            img_actual_color = procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray)
+            cv2.imshow("Estado del Estacionamiento", img_actual_color)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+    else:
+        print("[ERROR] Opción no válida. Saliendo.")
+        sys.exit()
+
     cv2.destroyAllWindows()
-except ValueError as e:
-    print(f"Error: {e}")
-    sys.exit()
