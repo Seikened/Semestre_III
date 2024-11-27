@@ -172,6 +172,15 @@ foto_actual = (
     "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/cinco_normalized.jpeg"
 )
 
+
+
+# Función para consolidar resultados entre métodos
+def consolidar_resultados(resultados_metodo):
+    """Combina resultados de todos los métodos para una predicción final."""
+    votos = [sum(lugar) for lugar in zip(*resultados_metodo)]
+    predicciones_finales = [1 if votos[i] > len(resultados_metodo) // 2 else 0 for i in range(len(votos))]
+    return predicciones_finales
+
 # Lista esperada de estados (0: vacío, 1: ocupado)
 estado_esperado = [1, 0, 1, 1, 1, 1]  # Modifica esta lista según el caso
 
@@ -207,18 +216,19 @@ try:
         {
             "nombre": "Área ocupada",
             "funcion": detectar_area_ocupada,
-            "argumentos": lambda roi_referencia, roi_actual: (roi_actual,),  # Solo usa roi_actual
+            "argumentos": lambda roi_referencia, roi_actual: (roi_actual,),
             "umbral": lambda x: x > 5000,
         },
         {
             "nombre": "Gradiente Sobel",
             "funcion": calcular_gradiente_sobel,
-            "argumentos": lambda roi_referencia, roi_actual: (roi_actual,),  # Solo usa roi_actual
+            "argumentos": lambda roi_referencia, roi_actual: (roi_actual,),
             "umbral": lambda x: x > 1e6,
         },
     ]
 
     # Evaluar el estacionamiento método por método
+    resultados_totales = []
     for metodo in metodos:
         print(f"\n[INFO] Evaluando todo el estacionamiento con el método: {metodo['nombre']}")
 
@@ -252,12 +262,17 @@ try:
                 color=color,
                 thickness=2,
             )
-            cv2.putText(imagen_metodo, f"Lugar {i}: {'ocupado' if estado == 1 else 'vacío'}", 
+            cv2.putText(imagen_metodo, f"Lugar {i}: {'ocupado' if estado == 1 else 'vacío'}",
                         (vertices[0][0], vertices[0][1] - 20),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2, cv2.LINE_AA)
 
         # Mostrar el resultado visual de este método
         cv2.imshow(f"Resultado - {metodo['nombre']}", imagen_metodo)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+        # Guardar resultados del método
+        resultados_totales.append(resultados_metodo)
 
         # Validación de resultados
         aciertos = sum(1 for pred, esp in zip(resultados_metodo, estado_esperado) if pred == esp)
@@ -268,12 +283,16 @@ try:
         print(f" - Estado esperado: {estado_esperado}")
         print(f" - Precisión: {precision:.2%}")
 
-        # Esperar antes de pasar al siguiente método
-        print(f"\n[INFO] Presiona cualquier tecla para continuar con el siguiente método...")
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+    # Consolidar resultados finales entre métodos
+    predicciones_finales = consolidar_resultados(resultados_totales)
+    print("\n[RESULTADO FINAL] Consolidado de todos los métodos:")
+    print(f" - Predicciones finales: {predicciones_finales}")
+    print(f" - Estado esperado: {estado_esperado}")
 
-    print("\n[INFO] Evaluación de todos los métodos completada.")
+    # Calcular precisión final
+    aciertos_finales = sum(1 for pred, esp in zip(predicciones_finales, estado_esperado) if pred == esp)
+    precision_final = aciertos_finales / len(estado_esperado)
+    print(f" - Precisión final: {precision_final:.2%}")
 
 except Exception as e:
     print(f"Error: {e}")
