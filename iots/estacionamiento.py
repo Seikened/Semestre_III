@@ -5,7 +5,8 @@ import sys
 import numpy as np
 from skimage.metrics import structural_similarity as ssim
 
-def cargar_imagen(ruta, escala_grises=True):
+
+def cargar_imagen(ruta, escala_grises=False):
     """Carga una imagen desde una ruta específica."""
     flag = cv2.IMREAD_GRAYSCALE if escala_grises else cv2.IMREAD_COLOR
     imagen = cv2.imread(ruta, flag)
@@ -13,27 +14,48 @@ def cargar_imagen(ruta, escala_grises=True):
         raise ValueError(f"No se pudo cargar la imagen desde {ruta}")
     return imagen
 
-def calcular_similitud(roi1, roi2):
-    """Calcula el índice de similitud estructural (SSIM) entre dos ROIs."""
-    return ssim(roi1, roi2, full=True)
+
+def preprocesar_imagen(imagen):
+    """Aplica preprocesamiento a la imagen para resaltar diferencias."""
+    gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+    desenfoque = cv2.GaussianBlur(gris, (5, 5), 0)
+    edges = cv2.Canny(desenfoque, 50, 150)  # Detectar bordes
+    return edges
+
+
+def calcular_diferencia_pixeles(roi1, roi2, umbral_pixeles=30):
+    """Calcula la diferencia por píxeles entre dos regiones."""
+    diff = cv2.absdiff(roi1, roi2)
+    _, diff_bin = cv2.threshold(diff, umbral_pixeles, 255, cv2.THRESH_BINARY)
+    porcentaje_diferencia = np.sum(diff_bin > 0) / np.prod(diff_bin.shape)
+    return porcentaje_diferencia
+
 
 def crear_mascara(imagen_shape, vertices):
     """Crea una máscara binaria para un polígono definido por vértices."""
+    if len(vertices) == 0:
+        raise ValueError("Los vértices de la máscara están vacíos.")
     mascara = np.zeros(imagen_shape[:2], dtype=np.uint8)
-    # Mostrar imagen al usuario para verla
-    cv2.imshow("Setup de cajones", mascara)
-    cv2.fillPoly(mascara, [np.array(vertices, np.int32)], 255)
+    vertices = np.array(vertices, np.int32)
+    cv2.fillPoly(mascara, [vertices], 255)
     return mascara
+
 
 def aplicar_mascara(imagen, mascara):
     """Aplica una máscara binaria a una imagen."""
+    if mascara.dtype != np.uint8:
+        raise ValueError("La máscara debe ser de tipo uint8.")
+    if mascara.shape != imagen.shape[:2]:
+        raise ValueError("La máscara no tiene el mismo tamaño que la imagen.")
     return cv2.bitwise_and(imagen, imagen, mask=mascara)
+
 
 def guardar_coordenadas(ruta_archivo, coordenadas):
     """Guarda las coordenadas de los cajones en un archivo JSON."""
     with open(ruta_archivo, "w") as archivo:
         json.dump(coordenadas, archivo, indent=4)
     print(f"Coordenadas guardadas en {ruta_archivo}")
+
 
 def cargar_coordenadas(ruta_archivo):
     """Carga las coordenadas de los cajones desde un archivo JSON."""
@@ -44,6 +66,7 @@ def cargar_coordenadas(ruta_archivo):
         print("No se encontraron coordenadas guardadas. Realiza el setup inicial.")
         return []
 
+
 # Ruta del archivo para guardar coordenadas
 archivo_coordenadas = "lugares_estacionamiento.json"
 
@@ -53,8 +76,11 @@ lugares_estacionamiento = cargar_coordenadas(archivo_coordenadas)
 if not lugares_estacionamiento:  # Si no hay coordenadas, ejecutar setup inicial
     print("No se encontraron coordenadas. Realiza el setup inicial.")
     imagen = cv2.imread(
-        "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/original.jpg"
+        "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/vacio_normalized.jpeg"
     )
+    if imagen is None:
+        raise ValueError("No se pudo cargar la imagen base para el setup inicial. Verifica la ruta y el archivo.")
+
     vertices_cajon = []
 
     def seleccionar_cajones(event, x, y, flags, param):
@@ -82,32 +108,55 @@ if not lugares_estacionamiento:  # Si no hay coordenadas, ejecutar setup inicial
 
 # Imágenes para probar
 foto_referencia = (
-    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/vacio.jpg"
+    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/vacio_normalized.jpeg"
 )
 foto_actual = (
-    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/seiscohes.jpg"
+    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/seis_normalized.jpeg"
 )
 
 try:
     # Cargar imágenes
-    imagen_referencia = cargar_imagen(foto_referencia)
-    imagen_actual = cargar_imagen(foto_actual)
+    imagen_referencia = cargar_imagen(foto_referencia, escala_grises=False)
+    imagen_actual = cargar_imagen(foto_actual, escala_grises=False)
+
+    # Validar que las imágenes sean del mismo tamaño
+    if imagen_referencia.shape != imagen_actual.shape:
+        raise ValueError("Las imágenes de referencia y actual no tienen el mismo tamaño.")
+
+    # Preprocesar imágenes
+    imagen_referencia_pre = preprocesar_imagen(imagen_referencia)
+    imagen_actual_pre = preprocesar_imagen(imagen_actual)
+
+    # Guardar preprocesadas para depuración
+    cv2.imwrite("referencia_preprocesada.jpeg", imagen_referencia_pre)
+    cv2.imwrite("actual_preprocesada.jpeg", imagen_actual_pre)
 
     # Evaluar cada lugar de estacionamiento
     for i, vertices in enumerate(lugares_estacionamiento, start=1):
         mascara = crear_mascara(imagen_referencia.shape, vertices)
-        roi_referencia = aplicar_mascara(imagen_referencia, mascara)
-        roi_actual = aplicar_mascara(imagen_actual, mascara)
+
+        roi_referencia = aplicar_mascara(imagen_referencia_pre, mascara)
+        roi_actual = aplicar_mascara(imagen_actual_pre, mascara)
 
         # Comparar las regiones (ROI)
-        similaridad, _ = calcular_similitud(roi_referencia, roi_actual)
-        estado = "ocupado" if similaridad < 0.8 else "vacío"
-        print(f"Lugar {i}: Similitud = {similaridad:.2f}, Estado = {estado}")
+        porcentaje_diferencia = calcular_diferencia_pixeles(roi_referencia, roi_actual)
+        estado = "ocupado" if porcentaje_diferencia > 0.05 else "vacio"
+        print(f"Lugar {i}: Diferencia = {porcentaje_diferencia:.2%}, Estado = {estado}")
 
         # Dibujar los polígonos en la imagen actual
-        color = (0, 255, 0) if estado == "vacío" else (0, 0, 255)
-        cv2.polylines(imagen_actual,[np.array(vertices, np.int32)],isClosed=True,color=color,thickness=2,)
+        color = (0, 255, 0) if estado == "vacio" else (0, 0, 255)
+        cv2.polylines(
+            imagen_actual,
+            [np.array(vertices, np.int32)],
+            isClosed=True,
+            color=color,
+            thickness=2,
+        )
+        # Mostrar texto en la imagen
+        cv2.putText(imagen_actual, f"Lugar {i}: {estado}", (vertices[0][0], vertices[0][1] - 20),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2, cv2.LINE_AA)
 
+    # Mostrar resultado final
     cv2.imshow("Estado del estacionamiento", imagen_actual)
     cv2.waitKey(0)
     cv2.destroyAllWindows()

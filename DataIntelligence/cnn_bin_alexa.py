@@ -8,13 +8,17 @@ from sklearn.utils import class_weight
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 from keras.callbacks import EarlyStopping
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from imblearn.over_sampling import RandomOverSampler
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn import svm
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.linear_model import LogisticRegression
 
 
 
@@ -60,6 +64,12 @@ df_test = df_test.rename(columns={"verified_reviews": "text"})
 # mostramos los primeros registros del training
 df_train.head()
 df_test.head()
+
+# Reemplazar valores NaN en df_train['text']
+df_train['text'] = df_train['text'].fillna('')
+
+# Reemplazar valores NaN en df_test['text']
+df_test['text'] = df_test['text'].fillna('')
 
 X_train = df_train["text"].tolist()
 y_train = df_train["feedback"].values
@@ -185,7 +195,7 @@ history = model.fit(
     X_resampled,
     y_resampled,
     epochs=15,
-    batch_size=32,
+    batch_size=32, # TODO: Ajustar este valor
     validation_data=(X_val, y_val),
     callbacks=[early_stopping]
 )
@@ -287,3 +297,72 @@ print(f"Última precisión de entrenamiento: {history.history['accuracy'][-1]:.4
 print(f"Última precisión de validación: {history.history['val_accuracy'][-1]:.4f}")
 print(f"Última pérdida de entrenamiento: {history.history['loss'][-1]:.4f}")
 print(f"Última pérdida de validación: {history.history['val_loss'][-1]:.4f}")
+
+# Combine text data for vectorization
+X_all = df_train['text'].tolist() + df_test['text'].tolist()
+
+# Initialize TF-IDF Vectorizer
+vectorizer = TfidfVectorizer(max_features=5000)
+vectorizer.fit(X_all)
+
+# Transform text data
+X_train_svm = vectorizer.transform(df_train['text'])
+X_test_svm = vectorizer.transform(df_test['text'])
+
+y_train_svm = df_train['feedback'].values
+y_test_svm = df_test['feedback'].values
+
+# Train SVM Model
+svm_model = svm.SVC(kernel='linear', class_weight='balanced')
+svm_model.fit(X_train_svm, y_train_svm)
+
+# Predict and Evaluate
+y_pred_svm = svm_model.predict(X_test_svm)
+
+print("SVM Classification Report:")
+print(classification_report(y_test_svm, y_pred_svm))
+
+print("SVM Confusion Matrix:")
+print(confusion_matrix(y_test_svm, y_pred_svm))
+
+# Train Logistic Regression Model
+lr_model = LogisticRegression(max_iter=1000, class_weight='balanced')
+lr_model.fit(X_train_svm, y_train_svm)
+
+# Predict and Evaluate
+y_pred_lr = lr_model.predict(X_test_svm)
+
+print("Logistic Regression Classification Report:")
+print(classification_report(y_test_svm, y_pred_lr))
+
+print("Logistic Regression Confusion Matrix:")
+print(confusion_matrix(y_test_svm, y_pred_lr))
+
+
+
+# Calculate metrics for CNN
+cnn_loss, cnn_accuracy, cnn_precision, cnn_recall = model.evaluate(X_test, y_test, batch_size=16)
+cnn_f1_score = 2 * (cnn_precision * cnn_recall) / (cnn_precision + cnn_recall)
+
+# Calculate metrics for SVM
+svm_accuracy = accuracy_score(y_test_svm, y_pred_svm)
+svm_precision = precision_score(y_test_svm, y_pred_svm)
+svm_recall = recall_score(y_test_svm, y_pred_svm)
+svm_f1_score = f1_score(y_test_svm, y_pred_svm)
+
+# Calculate metrics for Logistic Regression
+lr_accuracy = accuracy_score(y_test_svm, y_pred_lr)
+lr_precision = precision_score(y_test_svm, y_pred_lr)
+lr_recall = recall_score(y_test_svm, y_pred_lr)
+lr_f1_score = f1_score(y_test_svm, y_pred_lr)
+
+# Create a DataFrame to hold the metrics
+results = pd.DataFrame({
+    'Model': ['CNN', 'SVM', 'Logistic Regression'],
+    'Accuracy': [cnn_accuracy, svm_accuracy, lr_accuracy],
+    'Precision': [cnn_precision, svm_precision, lr_precision],
+    'Recall': [cnn_recall, svm_recall, lr_recall],
+    'F1-Score': [cnn_f1_score, svm_f1_score, lr_f1_score]
+})
+
+print(results)
