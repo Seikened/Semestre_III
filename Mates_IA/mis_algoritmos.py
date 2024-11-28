@@ -1,11 +1,12 @@
 class Node:
     def __init__(
-        self, nombre="Sin nombre", dadN=None, childL=None, childD=None, root=False
+        self, nombre="Sin nombre", valor=None, dadN=None, childL=None, childD=None, root=False
     ):
         self.validation(dadN)
         self.validation(childL)
         self.validation(childD)
         self.nombre = nombre
+        self.valor = valor
         self.node_dad = dadN
         self.node_child_left = childL
         self.node_child_right = childD
@@ -13,28 +14,22 @@ class Node:
 
     def validation(self, node):
         if node is not None and not isinstance(node, Node):
-            raise TypeError("dadN debe ser una instancia de Node o None")
+            raise TypeError("El nodo debe ser una instancia de Node o None")
 
     def add_left_child(self, child_node):
-        """LEEEEEEFTTTTT 👈🏼"""
-        
+        """Añadir hijo izquierdo"""
         self.validation(child_node)
-        # add dad
         child_node.add_dad(self)
         self.node_child_left = child_node
 
     def add_right_child(self, child_node):
-        """RIGHTTTTTTTTTT 👉🏼"""
-        
+        """Añadir hijo derecho"""
         self.validation(child_node)
-        # add dad
         child_node.add_dad(self)
         self.node_child_right = child_node
 
     def add_dad(self, dad_node):
         self.validation(dad_node)
-
-        # Tnego papa?
         if not self.node_dad:
             self.node_dad = dad_node
 
@@ -47,6 +42,7 @@ class Node:
     def __str__(self):
         text = f"""
         Nombre: {self.nombre}
+        Valor: {self.valor}
         Root: {self.am_i_root}
         Dad: {self.node_dad.nombre if self.node_dad else None}
         Child Left: {self.node_child_left.nombre if self.node_child_left else None}
@@ -100,9 +96,31 @@ class Arbol:
         for i, child in enumerate(children):
             self._imprimir_nodo(child, prefix + ("    " if is_tail else "│   "), i == len(children) - 1)
 
+    # Métodos de recorridos
+    def preorder(self, node):
+        if node:
+            print(node.nombre, end=" ")
+            self.preorder(node.node_child_left)
+            self.preorder(node.node_child_right)
+
+    def inorder(self, node):
+        if node:
+            self.inorder(node.node_child_left)
+            print(node.nombre, end=" ")
+            self.inorder(node.node_child_right)
+
+    def postorder(self, node):
+        if node:
+            self.postorder(node.node_child_left)
+            self.postorder(node.node_child_right)
+            print(node.nombre, end=" ")
+
+
+
+
+
 
 # Arbol de ejemplo
-
 ARBOL = {
     "a": ["b", "c"],
     "b": ["d", "e"],
@@ -116,5 +134,15 @@ ARBOL = {
 
 # Uso de la clase Arbol
 arbol = Arbol(ARBOL)
+print("Árbol:")
 arbol.imprimir_nodos()
+
+print("\nPreorden:")
+arbol.preorder(arbol.lista_nodos[0])
+
+print("\n\nInorden:")
+arbol.inorder(arbol.lista_nodos[0])
+
+print("\n\nPostorden:")
+arbol.postorder(arbol.lista_nodos[0])
 

@@ -32,7 +32,7 @@ LUGARES_ESTACIONAMIENTO = [
 
 # Parámetros ajustables
 UMBRAL_PIXELES = 60
-UMBRAL_OCUPADO = 18
+UMBRAL_OCUPADO = 18 # PORCENTAJE MINIMO PARA PODER DETECTAR SUGERENCIA FIJENSE EN LOS PRINTS
 
 def cargar_imagen_vacio():
     """Verifica si la imagen de referencia existe, de lo contrario permite capturarla."""
