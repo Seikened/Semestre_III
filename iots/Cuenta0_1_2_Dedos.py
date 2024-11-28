@@ -1,177 +1,118 @@
 import cv2
-import sys
+import mediapipe as mp
+import paho.mqtt.client as mqtt  # Instalar biblioteca para poder comunicar con el broker MQTT
+import urllib.request  # Para poder leer la imagen desde un link url
 import numpy as np
-import os
 import time
-import urllib.request
-import paho.mqtt.client as mqtt  # Biblioteca para MQTT
 
-# Rutas de imágenes
-IMG_PATH = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/"
-IMG_REF = os.path.join(IMG_PATH, "vacio_normalized.jpeg")
-IMAGES_TEST = [
-    os.path.join(IMG_PATH, "tres_normalized.jpeg"),
-    os.path.join(IMG_PATH, "cinco_normalized.jpeg"),
-    os.path.join(IMG_PATH, "seis_normalized.jpeg")
-]
+ruta_certificado = (
+    "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/root_ca.pem"
+)
 
-# Configuración ESP32-CAM
-ESP32_URL = "http://172.20.10.2/capture"
+# Leer el contenido del certificado para verificar que se carga correctamente
+with open(ruta_certificado, "r") as cert_file:
+    contenido_certificado = cert_file.read()
 
-# Coordenadas de las ROIs
-ANCHO = 700
-ALTO = 300
-LUGARES_ESTACIONAMIENTO = [
-    (24, 352, ANCHO, ALTO),
-    (39, 876, ANCHO, ALTO),
-    (34, 1388, ANCHO, ALTO),
-    (1047, 375, ANCHO, ALTO),
-    (1030, 896, ANCHO, ALTO),
-    (1041, 1376, ANCHO, ALTO),
-]
+# Imprimir solo una parte del certificado para confirmar que está cargado
+print("Contenido del certificado (parcial):")
+print(contenido_certificado[:100] + "\n...\n" + contenido_certificado[-100:])
 
-# Parámetros ajustables
-UMBRAL_PIXELES = 60
-UMBRAL_OCUPADO = 18  # PORCENTAJE MÍNIMO PARA DETECTAR OCUPACIÓN
-
-# Configuración MQTT
+# Configurar MQTT
 mqtt_broker = "a93ced358b004f36b2d791f6c69aba07.s1.eu.hivemq.cloud"
 mqtt_port = 8883
+mqtt_topic = "indice"
+mqtt_topic = "medio"
+mqtt_topic = "anular"
+mqtt_topic = "menique"
+
 mqtt_username = "SantRR2"
 mqtt_password = "Arbolito123"
-mqtt_topics = [f"lugar_{i}" for i in range(1, 7)]  # Tópicos para los lugares
 
-# Inicializar cliente MQTT
+# Inicializar cliente MQTT, puerto del broker y TLS para conexiones seguras
 client = mqtt.Client()
 client.username_pw_set(mqtt_username, mqtt_password)
 client.tls_set()
 
-# Intentar conexión con MQTT
+
 try:
     client.connect(mqtt_broker, mqtt_port, 60)
     client.loop_start()
-    print("[INFO] Conectado al broker MQTT")
+    print("Conectado al broker MQTT")
 except Exception as e:
-    print(f"[ERROR] No se pudo conectar al broker MQTT: {e}")
+    print(f"La conexión al broker falló, error: {e}")
 
 
-def cargar_imagen_vacio():
-    """Verifica si la imagen de referencia existe, de lo contrario permite capturarla."""
-    if not os.path.exists(IMG_REF):
-        print("[INFO] No se encontró la imagen de referencia. Capturando ahora...")
-        capturar_imagen(IMG_REF)
-    return cv2.imread(IMG_REF, cv2.IMREAD_GRAYSCALE)
+# Inicializar MediaPipe Hands, que es el módulo de detección de manos y la biblioteca que dibuja las
+# referencias de la mano en la imagen
+mp_hands = mp.solutions.hands
+hands = mp_hands.Hands()
+mp_drawing = mp.solutions.drawing_utils
+
+# Captura el video desde la URL de la ESP32-CAM.
+esp32_cam_url = "http://172.20.10.11/capture"
 
 
-def capturar_imagen(destino):
-    """Captura una imagen desde la ESP32-CAM y la guarda en el destino."""
-    while True:
-        try:
-            print("[INFO] Posiciona la cámara. Presiona 'Espacio' para capturar.")
-            response = urllib.request.urlopen(ESP32_URL)
-            image_np = np.array(bytearray(response.read()), dtype=np.uint8)
-            image = cv2.imdecode(image_np, -1)
-            cv2.imshow("Capturar Imagen", image)
-            if cv2.waitKey(1) & 0xFF == ord(' '):  # Capturar con espacio
-                cv2.imwrite(destino, image)
-                print(f"[INFO] Imagen guardada como: {destino}")
-                break
-        except Exception as e:
-            print(f"[ERROR] No se pudo capturar la imagen: {e}")
-    cv2.destroyAllWindows()
+def contar_dedos(hand_landmarks):
+    # Dedos: índice, medio
+    dedos_ids = [8, 12, 16, 20]
+
+    dedos_levantados_list = [False, False, False, False]
+
+    # Comparar posición de los dedos índice y medio con el punto de referencia (nudillo) y regresa
+    # el numero de dedos arriba de la mano derecha. Si la posición del punto de referencia del dedo es más
+    # alta que el del nudillo, se considera que el dedo está levantado. se usa el eje y para la comparación.
+    for p, id in enumerate(dedos_ids):
+        if hand_landmarks.landmark[id].y < hand_landmarks.landmark[id - 2].y:
+            if id == 8:
+                dedos_levantados_list[0] = True
+            elif id == 12:
+                dedos_levantados_list[1] = True
+            elif id == 16:
+                dedos_levantados_list[2] = True
+            elif id == 20:
+                dedos_levantados_list[3] = True
+            else:
+                dedos_levantados_list = [False, False, False, False]
+
+    return dedos_levantados_list
 
 
-def cargar_imagen_actual(modo, img_path=None):
-    """Carga una imagen en función del modo seleccionado."""
-    if modo == "prueba" and img_path:
-        return cv2.imread(img_path, cv2.IMREAD_COLOR)
-    elif modo == "streaming":
-        try:
-            response = urllib.request.urlopen(ESP32_URL)
-            image_np = np.array(bytearray(response.read()), dtype=np.uint8)
-            return cv2.imdecode(image_np, cv2.IMREAD_COLOR)
-        except Exception as e:
-            print(f"[ERROR] No se pudo obtener la imagen actual: {e}")
-            return None
-    return None
+while True:
+    # Obtener la imagen desde la ESP32-CAM con urllib.request y luego la convierte a una
+    # imagen OpenCV que si puede procesar
+    response = urllib.request.urlopen(esp32_cam_url)
+    image_np = np.array(bytearray(response.read()), dtype=np.uint8)
+    image = cv2.imdecode(image_np, -1)
 
+    # Procesa la imagen, la voltea en espejo, convierte de BGR a RGB y dibuja las marcas y conexiones
+    image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
+    results = hands.process(image)
+    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
-def analizar_lugar(roi_ref, roi_actual, area_total):
-    """Analiza un ROI y devuelve el porcentaje de píxeles blancos y la diferencia binaria."""
-    diferencia = cv2.absdiff(roi_ref, roi_actual)
-    _, diferencia_binaria = cv2.threshold(diferencia, UMBRAL_PIXELES, 255, cv2.THRESH_BINARY)
-    pixeles_blancos = cv2.countNonZero(diferencia_binaria)
-    porcentaje_blancos = (pixeles_blancos / area_total) * 100
-    return porcentaje_blancos, diferencia_binaria
+    dedoArriba = [False, False, False, False]
 
+    if (
+        results.multi_hand_landmarks
+    ):  # Si la imagen contiene más de una mano, se ejecuta para cada una
+        for hand_landmarks in results.multi_hand_landmarks:
+            dedoArriba = contar_dedos(hand_landmarks)
+            mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
-def dibujar_resultados(imagen, x, y, w, h, estado, color):
-    """Dibuja resultados en la imagen: rectángulo y transparencia."""
-    overlay = imagen.copy()
-    cv2.rectangle(overlay, (x, y), (x+w, y+h), color, -1)  # Relleno
-    cv2.addWeighted(overlay, 0.5, imagen, 0.5, 0, imagen)  # Transparencia
-    cv2.rectangle(imagen, (x, y), (x+w, y+h), color, 4)  # Contorno grueso
-    return imagen
+    # Publicar el texto correspondiente a la cantidad de dedos levantados
+    print(dedoArriba)
 
+    dedos_nombres = ["indice", "medio", "anular", "menique"]
+    dedos_topicos = ["indice", "medio", "anular", "menique"]
 
-def procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray):
-    """Procesa cada lugar de estacionamiento, calcula estado y dibuja resultados."""
-    for i, (x, y, w, h) in enumerate(LUGARES_ESTACIONAMIENTO, start=1):
-        roi_ref = img_ref[y:y+h, x:x+w]
-        roi_actual = img_actual_gray[y:y+h, x:x+w]
-        area_total = w * h
+    for i, estado in enumerate(dedoArriba):
+        client.publish(dedos_topicos[i], f"{estado}")
+        print(f"Publicando en {dedos_topicos[i]}: {estado}")
+    
+    time.sleep(1)
+    
+    #Mostrar la imagen con las manos detectadas
+    cv2.imshow("Cuenta dedos ESP32cam", image)
+    if cv2.waitKey(15) & 0xFF == 27:  # Presiona 'ESC' para salir
+        break
 
-        porcentaje_blancos, diferencia_binaria = analizar_lugar(roi_ref, roi_actual, area_total)
-        estado = "Ocupado🔴" if porcentaje_blancos > UMBRAL_OCUPADO else "Disponible🟢"
-        color = (0, 0, 255) if "Ocupado" in estado else (102, 255, 102)
-
-        # Publicar resultados a MQTT
-        mqtt_estado = "ocupado" if "Ocupado" in estado else "vacío"
-        client.publish(mqtt_topics[i-1], mqtt_estado)
-        print(f"[MQTT] Publicado en {mqtt_topics[i-1]}: {mqtt_estado}")
-
-        # Imprimir resultados
-        print(f"[RESULTADO] Lugar {i}: {estado} ({porcentaje_blancos:.2f}%)")
-
-        # Dibujar resultados
-        img_actual_color = dibujar_resultados(img_actual_color, x, y, w, h, estado, color)
-        cv2.imshow(f"Lugar {i} - Diferencia Binaria", diferencia_binaria)
-
-    return img_actual_color
-
-
-# Main
-if __name__ == "__main__":
-    print("Selecciona el modo:")
-    print("1. Modo de prueba (imágenes locales)")
-    print("2. Streaming en vivo (ESP32-CAM)")
-    opcion = input("Elige una opción (1 o 2): ")
-
-    img_ref = cargar_imagen_vacio()
-
-    if opcion == "1":
-        print("[INFO] Modo de prueba seleccionado.")
-        for img_path in IMAGES_TEST:
-            img_actual_color = cargar_imagen_actual("prueba", img_path)
-            img_actual_gray = cv2.cvtColor(img_actual_color, cv2.COLOR_BGR2GRAY)
-            img_actual_color = procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray)
-            cv2.imshow("Estado del Estacionamiento", img_actual_color)
-            if cv2.waitKey(0) & 0xFF == ord('q'):
-                break
-    elif opcion == "2":
-        print("[INFO] Modo de streaming seleccionado.")
-        while True:
-            img_actual_color = cargar_imagen_actual("streaming")
-            if img_actual_color is None:
-                time.sleep(2)
-                continue
-            img_actual_gray = cv2.cvtColor(img_actual_color, cv2.COLOR_BGR2GRAY)
-            img_actual_color = procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray)
-            cv2.imshow("Estado del Estacionamiento", img_actual_color)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
-    else:
-        print("[ERROR] Opción no válida. Saliendo.")
-        sys.exit()
-
-    cv2.destroyAllWindows()
+cv2.destroyAllWindows()

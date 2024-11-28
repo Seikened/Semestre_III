@@ -4,8 +4,8 @@ import numpy as np
 import os
 import time
 import urllib.request
+import paho.mqtt.client as mqtt  # Biblioteca para MQTT
 
-os.system("clear")
 # Rutas de imágenes
 IMG_PATH = "/Users/fernandoleonfranco/Documents/GitHub/Semestre_III/iots/fotos/"
 IMG_REF = os.path.join(IMG_PATH, "vacio_normalized.jpeg")
@@ -32,7 +32,28 @@ LUGARES_ESTACIONAMIENTO = [
 
 # Parámetros ajustables
 UMBRAL_PIXELES = 60
-UMBRAL_OCUPADO = 18 # PORCENTAJE MINIMO PARA PODER DETECTAR SUGERENCIA FIJENSE EN LOS PRINTS
+UMBRAL_OCUPADO = 18  # PORCENTAJE MÍNIMO PARA DETECTAR OCUPACIÓN
+
+# Configuración MQTT
+mqtt_broker = "a93ced358b004f36b2d791f6c69aba07.s1.eu.hivemq.cloud"
+mqtt_port = 8883
+mqtt_username = "SantRR2"
+mqtt_password = "Arbolito123"
+mqtt_topics = [f"lugar_{i}" for i in range(1, 7)]  # Tópicos para los lugares
+
+# Inicializar cliente MQTT
+client = mqtt.Client()
+client.username_pw_set(mqtt_username, mqtt_password)
+client.tls_set()
+
+# Intentar conexión con MQTT
+try:
+    client.connect(mqtt_broker, mqtt_port, 60)
+    client.loop_start()
+    print("[INFO] Conectado al broker MQTT")
+except Exception as e:
+    print(f"[ERROR] No se pudo conectar al broker MQTT: {e}")
+
 
 def cargar_imagen_vacio():
     """Verifica si la imagen de referencia existe, de lo contrario permite capturarla."""
@@ -40,6 +61,7 @@ def cargar_imagen_vacio():
         print("[INFO] No se encontró la imagen de referencia. Capturando ahora...")
         capturar_imagen(IMG_REF)
     return cv2.imread(IMG_REF, cv2.IMREAD_GRAYSCALE)
+
 
 def capturar_imagen(destino):
     """Captura una imagen desde la ESP32-CAM y la guarda en el destino."""
@@ -58,6 +80,7 @@ def capturar_imagen(destino):
             print(f"[ERROR] No se pudo capturar la imagen: {e}")
     cv2.destroyAllWindows()
 
+
 def cargar_imagen_actual(modo, img_path=None):
     """Carga una imagen en función del modo seleccionado."""
     if modo == "prueba" and img_path:
@@ -72,6 +95,7 @@ def cargar_imagen_actual(modo, img_path=None):
             return None
     return None
 
+
 def analizar_lugar(roi_ref, roi_actual, area_total):
     """Analiza un ROI y devuelve el porcentaje de píxeles blancos y la diferencia binaria."""
     diferencia = cv2.absdiff(roi_ref, roi_actual)
@@ -80,6 +104,7 @@ def analizar_lugar(roi_ref, roi_actual, area_total):
     porcentaje_blancos = (pixeles_blancos / area_total) * 100
     return porcentaje_blancos, diferencia_binaria
 
+
 def dibujar_resultados(imagen, x, y, w, h, estado, color):
     """Dibuja resultados en la imagen: rectángulo y transparencia."""
     overlay = imagen.copy()
@@ -87,6 +112,7 @@ def dibujar_resultados(imagen, x, y, w, h, estado, color):
     cv2.addWeighted(overlay, 0.5, imagen, 0.5, 0, imagen)  # Transparencia
     cv2.rectangle(imagen, (x, y), (x+w, y+h), color, 4)  # Contorno grueso
     return imagen
+
 
 def procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray):
     """Procesa cada lugar de estacionamiento, calcula estado y dibuja resultados."""
@@ -99,6 +125,11 @@ def procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray):
         estado = "Ocupado🔴" if porcentaje_blancos > UMBRAL_OCUPADO else "Disponible🟢"
         color = (0, 0, 255) if "Ocupado" in estado else (102, 255, 102)
 
+        # Publicar resultados a MQTT
+        mqtt_estado = "ocupado" if "Ocupado" in estado else "vacío"
+        client.publish(mqtt_topics[i-1], mqtt_estado)
+        print(f"[MQTT] Publicado en {mqtt_topics[i-1]}: {mqtt_estado}")
+
         # Imprimir resultados
         print(f"[RESULTADO] Lugar {i}: {estado} ({porcentaje_blancos:.2f}%)")
 
@@ -107,6 +138,7 @@ def procesar_estacionamiento(img_ref, img_actual_color, img_actual_gray):
         cv2.imshow(f"Lugar {i} - Diferencia Binaria", diferencia_binaria)
 
     return img_actual_color
+
 
 # Main
 if __name__ == "__main__":
