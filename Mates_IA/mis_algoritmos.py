@@ -319,59 +319,67 @@ class Grafo:
         return arbol
 
 
-# Ejemplo de uso
-grafo_data = {
-    A: [(B, 2), (C, 6)],
-    B: [(A, 2), (C, 3), (D, 8)],
-    C: [(A, 6), (B, 3), (E, 7)],
-    D: [(B, 8), (E, 9)],
-    E: [(C, 7), (D, 9)],
-}
-
-grafo = Grafo(grafo_data)
-print("Grafo:")
-grafo.imprimir_grafo()
-
-print("\nDFS desde A:")
-grafo.dfs("A")
-
-print("\n\nBFS desde A:")
-grafo.bfs("A")
-
-print("\n\nDijkstra desde A:")
-print(grafo.dijkstra("A"))
-
-print("\nKruskal:")
-print(grafo.kruskal())
-
-print("\nPrim desde A:")
-print(grafo.prim("A"))
 
 
 
-# Arbol de ejemplo
-ARBOL = {
-    A: [B, C],
-    B: [D, E],
-    D: [None, None],
-    E: [None, None],
-    C: [None, F],
-    F: [H, G],
-    G: [None, None],
 
-}
+if __name__ == "__main__":
+    # Ejemplo de uso
+    grafo_data = {
+        A: [(B, 2), (C, 6)],
+        B: [(A, 2), (C, 3), (D, 8)],
+        C: [(A, 6), (B, 3), (E, 7)],
+        D: [(B, 8), (E, 9)],
+        E: [(C, 7), (D, 9)],
+    }
 
-# Uso de la clase Arbol
-arbol = Arbol(ARBOL)
-print("Árbol:")
-arbol.imprimir_nodos()
+    grafo = Grafo(grafo_data)
+    print("Grafo:")
+    grafo.imprimir_grafo()
 
-print("\nPreorden:")
-arbol.preorder(arbol.lista_nodos[0])
+    print("\nDFS desde A:")
+    grafo.dfs("A")
 
-print("\n\nInorden:")
-arbol.inorder(arbol.lista_nodos[0])
+    print("\n\nBFS desde A:")
+    grafo.bfs("A")
 
-print("\n\nPostorden:")
-arbol.postorder(arbol.lista_nodos[0])
+    print("\n\nDijkstra desde A:")
+    print(grafo.dijkstra("A"))
 
+    print("\nKruskal:")
+    print(grafo.kruskal())
+
+    print("\nPrim desde A:")
+    print(grafo.prim("A"))
+
+
+
+    # Arbol de ejemplo
+    ARBOL = {
+        A: [B, C],
+        B: [D, E],
+        D: [None, None],
+        E: [None, None],
+        C: [None, F],
+        F: [H, G],
+        G: [None, None],
+
+    }
+
+
+    print("\n\n")
+    # Uso de la clase Arbol
+    arbol = Arbol(ARBOL)
+    print("Árbol:")
+    arbol.imprimir_nodos()
+
+    print("\nPreorden:")
+    arbol.preorder(arbol.lista_nodos[0])
+
+    print("\n\nInorden:")
+    arbol.inorder(arbol.lista_nodos[0])
+
+    print("\n\nPostorden:")
+    arbol.postorder(arbol.lista_nodos[0])
+
+    

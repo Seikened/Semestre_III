@@ -19,8 +19,8 @@ IMAGES_TEST = [
 ESP32_URL = "http://172.20.10.2/capture"
 
 # Coordenadas de las ROIs
-ANCHO = 700
-ALTO = 300
+ANCHO = 70
+ALTO = 30
 LUGARES_ESTACIONAMIENTO = [
     (24, 352, ANCHO, ALTO),
     (39, 876, ANCHO, ALTO),
