@@ -465,10 +465,10 @@ semana_chamba.load_data(loads_dataset("s"))
 # semana_chamba.visualizar_grafo()
 
 # # Visualizar los clústeres de servicios en una gráfica interactiva
-# semana_chamba.visualizar_cluster_interactivo()
+semana_chamba.visualizar_cluster_interactivo()
 
 # # Visualizar el grafo de servicios en una gráfica interactiva
-# semana_chamba.visualizar_grafo_interactivo()
+semana_chamba.visualizar_grafo_interactivo()
 
 
-# semana_chamba.mapa_con_rutas_optimas(gmaps)
+semana_chamba.mapa_con_rutas_optimas(gmaps)
