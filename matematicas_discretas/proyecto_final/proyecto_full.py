@@ -18,7 +18,7 @@ from collections import defaultdict
 import random
 
 # Google maps
-api = "AIzaSyAAc24cJ503tMShX7R5La2p5NAOs6luPWc"
+api = "tu_api_key"
 gmaps = googlemaps.Client(key=api)
 
 
